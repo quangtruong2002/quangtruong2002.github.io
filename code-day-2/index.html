@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+
+    <!-- nhúng external css-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- internal CSS -->
+    <style>
+        p {
+            color: yellow;
+            font-size: 48px;
+        }
+
+        p#ark {
+            background-color: brown;
+        } 
+    #ark {
+            background-color: black;
+            text-transform: lowercase;
+            text-align: center;
+        } 
+        .apk {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <p style="font-weight: bold; font-size: 24px; color: blue;">hôm nay là ngày 30 tháng 11</p>
+    <!-- sử dụng inline css 
+         Độ ưu tiên lớn hơn internal css -->
+     <!-- các độ ưu tiên css
+        inline >internal css > external
+     -->
+    <p id="ark" class="apk">chào mừng bạn dũng</p>
+</body>
+
+</html>
