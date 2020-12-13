@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+body {
+background-color: yellow;
+ }
+ #container {
+      font-family: roboto -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+ #design {
+     background-color: #0D021A;
+     width: 100%;
+     height: 60px;
+     padding-left: 198px;
+     padding-right: 198px;
+     display: flex;
+     flex-direction: row;
+     box-shadow: 0 5px 15px 0 #1e0035;
+ }
+.logo img{
+    width: 100px;
+    height: 60px;
+}
+.avatar {
+    width: 40px;
+    height: 40px;
+    margin-top: 9px;
+
+}
+.avatar img {
+    width: 100%;
+    border-radius: 25px;
+}
+.icon {
+    background-color: #220c38;
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 9px;
+    margin-right: 10px;
+}
+.icon a {
+    color: white;
+}
+.margin {
+    margin-left: 185px;
+}
+.menu {
+    
+}
+.menu-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-list li {
+    margin-top: 15px;
+    margin-left: 25px;
+    list-style-type: none;
+    line-height: 26px; 
+    display: flex;
+    flex-direction: row;
+
+}
+.menu-list a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.color {
+    color: white;
+    transition-property: color;
+    transition-duration: 1.5s;
+    
+}
+.color:hover {
+    color: #8869E4;
+}
+/* menu đa cấp */
+.menu-list{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.sub-menu {
+    position: absolute;
+    margin-top: 19px;
+    padding-right: 15px;
+    display: none;
+    background-color: #190032;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+}
+.sub-menu li a {
+    color: white;
+}
+.menu-list li:hover .sub-menu {
+    display: block;
+}
+.color2 {
+    color: white;
+    transition-property: color;
+    text-transform: uppercase;
+}
+.color2:hover {
+    color: rgb(170, 170, 92);
+}
