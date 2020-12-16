@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <link rel="shortcut icon" href="./anh/logo.jpg" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+        body {
+            background-color: rgb(0, 255, 179);
+            padding-top: 120px;
+        }
+        #container {
+            background-color: #fff;
+        width: 60%;
+        height: 60vh;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        p {
+        text-transform: uppercase;
+        font-size: 45px;
+        font-weight: 800;
+        line-height: 81px;
+        }
+        .text::after {
+            content: "";
+            animation: texter 3.7s ease-out  infinite;
+        }
+        @keyframes texter {
+            0% {
+                content:"learning";
+                background-color: rgb(37, 206, 65);
+                color: #fff;
+            }
+            33.3333% {
+                content:"teaching";
+                background-color: rgb(0, 238, 255);
+                color: #fff;
+            }
+            66.66% {
+                content:"coding";
+                background-color: rgb(255, 50, 50);
+                color: #fff;
+            }
+            99.9999% {
+                content: "playing";
+                background-color: rgb(228, 215, 26);
+                color: #fff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <p>start</p>
+    <div> <p class="text"></p></div>
+        <p>today</p>
+    </div>
+</body>
+</html>

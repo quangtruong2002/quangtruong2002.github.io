@@ -305,9 +305,7 @@ a{
     line-height: 1.2;
 }
 .row {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-direction: row;
     margin-right: -15px;
     margin-left: -15px;

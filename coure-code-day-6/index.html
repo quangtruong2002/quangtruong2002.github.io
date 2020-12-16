@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* psesudo class */
+        a:link {
+            color: rgb(46, 43, 226);
+        }
+
+        a:visited {
+            color: chartreuse;
+        }
+
+        a:hover {
+            color: pink;
+        }
+
+        a:active {
+            color: crimson;
+        }
+
+        .breackfast::before {
+            content: "hôm nay";
+        }
+
+        .breackfast::after {
+            content: "Việt nam đồng";
+        }
+
+        .today::before {
+            position: relative;
+            content: "";
+            flex: 0;
+            top: 8px;
+            border-top: 10px solid green;
+            border-bottom: 10px solid pink;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+
+        .today::after {
+            content: url(ảnh);
+        }
+        .text::first-letter {
+            color: green;
+        }
+        .text::first-line {
+            color: red ;
+        }
+        .text::selection {
+            color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="http://techmaster.vn">techmaster</a>
+
+    <p class="breackfast">ăn sáng hết 10k</p>
+    <p class="breackfast">ăn sáng hết 10k</p>
+    <p class="breackfast">ăn sáng hết 10k</p>
+    <p class="breackfast">ăn sáng hết 10k</p>
+    <p class="breackfast">ăn sáng hết 10k</p>
+
+    <p class="today">today is a gread day</p>
+
+    <p class="text">Em được ông nội dẫn ra đồng, đây là lần đầu tiên em được ngắm nhìn cánh đồng quê hương mình sau mấy năm xa cách.
+        Cánh đồng mênh mông, mang một màu xanh mướt tựa tấm lụa đào, trải dài tít tắp tới phía cuối chân trời. Bao chị
+        cò trắng cần mẫn kiếm mồi, mấy chú chim chích cũng tranh thủ làm tổ trên những khóm lúa của đồng quê. Mấy bác
+        nông dân đang hăng say lao động sản xuất, người tranh thủ nhổ cỏ dại cho ruộng lúa, người bón thêm đạm cho lúa
+        kịp trổ bông đúng thời. Ánh vàng của chiều hoàng hôn buông xuống tô lên vẻ đẹp của cảnh vật. Ôi! Đẹp quá! Cánh
+        đồng làng quê của tôi.</p>
+</body>
+
+</html>
