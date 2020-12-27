@@ -1,0 +1,233 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(230, 230, 230);
+    font-family: sans-serif;
+}
+#container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.banner {
+    background-color: white;
+    background-image: url(https://i.ytimg.com/vi/qNPswNUfWI8/maxresdefault.jpg);
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text {
+    font-size: 26px;
+    color: #464646;
+}
+a {
+    text-decoration: none;
+}
+.menu {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.input {
+    padding: .375rem .4rem;
+    font-size: 18px;
+    border: 1px solid #ced4da;
+    border-radius: .25rem; 
+    margin-right: 5px;
+}
+.form {
+    position: relative;
+    left: 676px;
+}
+.button {
+border: 1px solid #28a745;
+padding: 6px 8px;
+border-radius: 5px;
+color: #28a745;
+background-color: white;
+transition-duration: 0.3s;
+font-size: 18px;
+}
+.button:hover {
+    background-color: rgb(1, 160, 1);
+    color: white;
+}
+.a1 {
+    color: black;
+    font-size: 17px;
+}
+.a2 {
+    color: gray;
+    font-size: 17px;
+}
+.a3 {
+    color: black;
+}
+.a2:hover {
+    color: black;
+}
+.left-collum {
+    float: left;
+    width: 75%;
+}
+.box {
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,.125);
+    line-height: 1.5;
+    text-align: justify;
+}
+.position {
+   position: relative;
+   left: 100px; 
+}
+h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+.anh {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(194, 194, 194);
+}
+.width2 {
+    width: 40%;
+    margin: 14px;
+    margin-left: 52px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+    line-height: 2;
+}
+.padding {
+    padding-left: 10px;
+}
+.width2 img {
+    border-radius: 5px 5px 0px 0px;
+}
+.right-collum {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+.box1 {
+    background-color: #ffddd2;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,.125);
+    text-align: justify;
+}
+.box2 {
+    background: rgb(0, 217, 255);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,.125)
+}
+.footer {
+    width: 166.5%;
+     background-color: #464646; 
+     padding: 20px 137px;
+     position: relative;
+     right: 142px;
+     top: 20px;
+ }
+ .footer a {
+     color: black;
+ }
+ .avatar {
+       width: 40px;
+       height: 40px;
+       background-image: url(https://scontent.fhan2-4.fna.fbcdn.net/v/t1.15752-0/s206x206/133201900_1890315674439448_5775715257336005041_n.jpg?_nc_cat=104&ccb=2&_nc_sid=58c789&_nc_ohc=jzRCKP4LdBUAX8dZ6St&_nc_ht=scontent.fhan2-4.fna&tp=7&oh=b6dd1924d221918d0ae7dba59febd883&oe=600E0CD0);
+       background-position: center;
+       background-size: cover;
+       border-radius: 30px;
+       margin-right: 30px;
+ }
+ .avatar img {
+       
+       
+ }
+ blockquote {
+     line-height: 1.5;
+     font-family: serif;
+     font-size: 18px;
+     font-weight: 600;
+     font-style: italic;
+     color: rgb(223, 223, 223);
+ }
+ .color2 a {
+     color: #00d9ff;
+ }
+ .addres {
+     font-size: 40px;
+     padding-top: 10px;
+ }
+ .addres a {
+     margin-right: 35px;
+ }
+ .display {
+     display: flex;
+ }
+ table, tr, td, th {
+    background-color: white;
+     border:1px groove black;
+     padding: 10px;
+     font-style: italic;
+     font-weight: 600;
+     font-family: serif;
+     text-align: center;
+     font-size: 18px;
+     margin-left: 50px;
+ }
+ th {
+     background-color: black !important;
+     color: white;
+ }
+
+ .color {
+     background-color: black;
+     color: white;
+ }
+
+ .icon {
+     width: 40px;
+     height: 40px;
+     background-color: white;
+     position: fixed;
+     right: 22px;
+     bottom: 22px;
+     font-size: 30px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 30px;
+     color: turquoise;
+ }
+ .outside {
+     width: 65px;
+     height: 65px;
+     background-color: turquoise;
+     border-radius: 10px;
+     position: fixed;
+     right: 10px;
+     bottom: 10px;
+     
+ }
+
