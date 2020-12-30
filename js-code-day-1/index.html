@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto accusantium qui, nesciunt, excepturi vitae
+        sequi earum natus corrupti veritatis quam voluptate alias doloribus facilis debitis nihil eligendi harum
+        asperiores ab odio consequuntur fuga? Ea obcaecati earum cum non odio necessitatibus, quibusdam dolorem debitis
+        impedit ipsam sunt in exercitationem similique. Repellendus.</p>
+
+
+
+
+
+
+
+    <script src="./main.js"></script>
+    <script>
+        // alert ("xin chào")
+        // document.write("xin chào"); ghi vào phần hiển thị ủa trình duyệt
+        console.log('hello world'); //để ghi vào phần console của trình duyệt
+
+        //====================
+        // console.log("age");
+        let age = 35;
+        console.log("age");
+
+        console.log("age1");
+
+        let firstname = "nguyen"
+        let lastname = "van B"
+        let fullname = firstname + lastname;
+        console.log(fullname);
+
+        let fullname1 = `${firstname} ${lastname} năm nay ${2020-1992} Tuổi`
+        console.log(fullname)
+        
+        let num0 = "";
+        let num1 = 1;
+        let num2 = 0;
+        let num3 = true;
+        let num4 = false;
+        let num6 =6;
+        let num7 ="3";
+        let num8 ="2";
+        let num9 ="3";
+        let num10 = 4;
+        let num11 = 5;
+        let num12 = "px"
+
+        console.log(num1 + num2)
+        console.log(num1 - num2)
+        console.log(num1 * num2)
+        console.log(num1 / num2)
+        console.log(num1 % num2)
+        console.log(num1 ** num2)
+        console.log(Math.pow(num1, num2))
+        console.log(Math.max(2,3,54,66,77,81.57))
+        console.log(Math.min(2,3,54,66,77,81.57))
+        //console.log(num0 - num1 + num2)
+        console.log(num3 + num4)
+        console.log(num6 / num7)
+        console.log(num8 * num7)
+        console.log(num10 + num11 +num12)
+        console.log("&" + 4 + 5)
+        console.log("4" - 2)
+        console.log("4px" - 2)
+        console.log(7 / 0)
+        console.log("-9" - 5)
+        console.log("-9" + 5)
+        console.log(-7 / 0)
+        console.log(null + 1)
+        console.log(undefined + 1)
+        console.log("9" == 9)
+        console.log("9" === 9)
+        console.log(0.1 % 0.2)
+        console.log(0.1 + 0.2 == 0.3)
+
+        let a = 1;
+        let b = 22;
+        let name = 'John';
+        console.log(b + a)
+        console.log(a + name)
+        
+        //Định nghĩa function
+        function sayHello(name) {
+            // console.log("xin chào " + name)
+            console.log('xin chào  ${name}');
+        }
+
+        //gọi function
+        sayHello("anh A")
+        sayHello("anh B")
+
+        function sum (a,b) {
+            let result = a + b 
+            return result 
+        }
+
+        let data = sum(10, 8);
+console.log(data)
+console.log(data == 20)
+
+
+console.log(sum());
+console.log(sum(1));
+console.log(1, 3);
+
+function hello() {
+     console.log("Xin chào các bạn")
+}
+    hello()
+function hellopro(name) {
+    console.log("xin chào" + name)
+}
+
+hellopro("hào")
+hellopro("phú")
+
+
+console.log()
+//biến nằm bên ngoài function là biến global
+let email = 'abc@gmail.com';
+
+//bo
+{
+    let address = "Hà Nội"
+    console.log(address);
+}
+//local
+console.log(address)
+    </script>
+</body>
+
+</html>

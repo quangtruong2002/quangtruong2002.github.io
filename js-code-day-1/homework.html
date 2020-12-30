@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        //chu vi hình tròn
+        function circle(d, pi) {
+                perimete = d * pi 
+                return perimete
+        }
+        let data = circle(6, 3.14);
+        console.log(data)
+        
+        //diện tích hình tròn
+        function acreage(b, a, pi) {
+            prerimete = b ** a * pi
+              return prerimete
+        }
+        let number = acreage(6, 2, 3.14);
+        console.log(number)
+
+        //công thức đổi từ cm sang m
+        function recipe(a, b) {
+            convert = a / b
+           return convert
+        }
+           let centimeter = recipe(100, 100)
+           console.log(centimeter)
+
+        //công thức quy đổi từ phút sang giờ
+        function timing(a, b) {
+            centimeter = a / b
+            return centimeter
+        }
+            let meter = timing(60, 60)
+            console.log(meter)
+
+        //công thức quy đổi từ độ C => độ F
+        function temperature(a, b, c) {
+            Celsius = a * b + c
+            return Celsius
+        }
+        let  Fahrenheit = temperature(1.8, 18, 32)
+        console.log(Fahrenheit)
+        
+        //công thức tính chỉ số BMI của 1 người
+        function BMI(a, b, c) {
+            recipeBIM = a / (b * c)
+            return recipeBIM
+        }
+        let result = BMI(50, 1.73, 1.73)
+        console.log(result)
+    
+        //phương trình bậc nhất (Ax + b = 0)
+        function firstclass(a, b) {
+            x = -b/a 
+            return x 
+        }
+        let resulta = firstclass(7, -12)
+        console.log(resulta)
+
+        //randum một số trong khoảng min-max
+        function randumnumber(min, max){
+            return Math.floor(Math.random() * (max - min + 1))
+        }
+        let a = randumnumber (1, 100)
+        console.log(a)
+    
+
+    </script>
+</body>
+</html>
