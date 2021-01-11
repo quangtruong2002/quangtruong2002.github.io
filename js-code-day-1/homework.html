@@ -11,68 +11,69 @@
 
     <script>
         //chu vi hình tròn
-        function circle(d, pi) {
-                perimete = d * pi 
+        function circle(d, ) {
+               let perimete = d * 3.14
                 return perimete
         }
-        let data = circle(6, 3.14);
+        let data = circle(6);
         console.log(data)
         
         //diện tích hình tròn
-        function acreage(b, a, pi) {
-            prerimete = b ** a * pi
+        function acreage(b) {
+           let prerimete = b ** 2 * 3.14
               return prerimete
         }
-        let number = acreage(6, 2, 3.14);
+        let number = acreage(6);
         console.log(number)
 
         //công thức đổi từ cm sang m
-        function recipe(a, b) {
-            convert = a / b
+        function recipe(a) {
+          let convert = a / 100
            return convert
         }
-           let centimeter = recipe(100, 100)
+           let centimeter = recipe(100)
            console.log(centimeter)
 
         //công thức quy đổi từ phút sang giờ
-        function timing(a, b) {
-            centimeter = a / b
+        function timing(a) {
+           let centimeter = a / 60
             return centimeter
         }
-            let meter = timing(60, 60)
+            let meter = timing(60)
             console.log(meter)
 
         //công thức quy đổi từ độ C => độ F
-        function temperature(a, b, c) {
-            Celsius = a * b + c
+        function temperature(b) {
+           let Celsius = 1.8 * b + 32
             return Celsius
         }
-        let  Fahrenheit = temperature(1.8, 18, 32)
+        let  Fahrenheit = temperature(18)
         console.log(Fahrenheit)
         
         //công thức tính chỉ số BMI của 1 người
-        function BMI(a, b, c) {
-            recipeBIM = a / (b * c)
+        function BMI(a, b) {
+           let recipeBIM = a / (b * b)
             return recipeBIM
         }
-        let result = BMI(50, 1.73, 1.73)
+        let result = BMI(50, 1.73)
         console.log(result)
     
         //phương trình bậc nhất (Ax + b = 0)
         function firstclass(a, b) {
-            x = -b/a 
-            return x 
+           let experience = -b/a 
+            return experience
         }
         let resulta = firstclass(7, -12)
         console.log(resulta)
 
         //randum một số trong khoảng min-max
         function randumnumber(min, max){
-            return Math.floor(Math.random() * (max - min + 1))
+            return Math.floor(Math.random() * (max - min + 1) + min)
         }
         let a = randumnumber (1, 100)
         console.log(a)
     
+        //sửa các công thức thành số nếu nó không phải thay đổi
 
     </script>
 </body>

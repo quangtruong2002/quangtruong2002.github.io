@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //
+        let arr = [1, 2, 3, 4];
+        let pop = arr.pop();
+        console.log(pop);
+        console.log(arr);
+
+        let push = arr.push(11)
+        console.log(push)
+        console.log(arr)
+
+        // sử dụng để đảo ngược chuỗi
+        let reverse = arr.reverse();
+        console.log(reverse);
+
+        //slice sử dụng để tách ra những mảng ban đầu 
+        //sự khác biệt giữa slice và splice{tạo ra một mảng mới}
+        console.log(arr.slice(0,3))
+        console.log(arr.slice(1)) //nếu chỉ truyền một tham số nó sẽ chỉ lấy bắt đầu từ tham số đầu đến cuối mảng
+        console.log(arr.slice())  //với trường hợp không truyền tham số nào nó sẽ lấy tất cả số trong mảng
+        
+
+        //indexOf sử dụng để tìm khiếm 1 phần tử có trong mảng hay không
+        //nếu có trả về vị trí đầu tiên mà nó tìm thấy trong mảng 
+        // nếu không trả về -1
+        console.log(arr.indexOf(3));
+        console.log(arr.indexOf());
+        console.log(arr.indexOf(7));
+        // lastIndexOf trả về vị trí của phần tử cuối cùng mà nó tìm thấy trong mẩng
+        console.log(arr.lastIndexOf(3));
+
+
+        //join sử dụng để chuyển một mảng thành chuỗi
+        console.log(arr.join(" ")) // "-"  thêm các dấu ngăn cách vào giữa các phần tử
+
+       // viết ý tưởng ra trước khi làm bài và ghi cụ thể mình sẽ làm theo những bước nào 
+       //bài 1
+function arrnumber(a) {
+    let max = a[0];
+    for (let i = 0; i < a.length; i = i + 1) {
+        if (a[i] > max) {
+            max = a[i];
+        }
+   }
+ console.log(max)
+ for (let i = 0 ; i < a.length; i++) {
+     if (a[i] == max) {
+         a.splice(i,1)
+     }
+ }
+ console.log(a)
+ let max2 = a[0]
+    for (let i = 0; i < a.length; i = i + 1) {
+        if (a[i] > max2) {
+            max2 = a[i];
+        }
+   }
+   console.log(max2)
+}
+let acc = arrnumber([12,23,33,43,56])
+
+//bài 2
+
+    </script>
+</body>
+
+</html>

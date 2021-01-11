@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        function checkElement(a, b) {
+            // if (a.includes(b)) {
+            //     return true
+            // }
+            // else {
+            //     return false
+            // }
+            return a.includes(b)
+        }
+        let alan = checkElement("i love you", "hate")
+        console.log(alan)
+
+
+
+        // Bài 2 
+        function cutlength(str) {
+            if (str.length >= 8) {
+                let c = str.slice(0, 9)
+                return c.concat("...")
+
+            }
+            else {
+                return c
+            }
+        }
+        let Element = cutlength("Xin chào các bạn")
+        console.log(Element)
+
+        //bài 3
+        // Viết function có tác dụng biến 1 chuỗi thành chuỗi chỉ viết hoa từ đầu tiên.
+        // Ví dụ: capitalizeString('chÀo MừnG đẾn với techMaster') => 'Chào Mừng Đến Với Techmaster'
+        function toUpper(str) {
+            return str
+                .toLowerCase()
+                .split(' ')
+                .map(function (word) {
+                    word[0]
+                    word.substr(1)
+                    return word[0].toUpperCase() + word.substr(1)
+                })
+                .join(' ')
+        }
+        console.log(toUpper("xin chào các bạn"))
+
+        //bài 4
+        function tring(str, a) {
+            let b = ""
+            for (let i = 0; i < a; i++) {
+                b += `${str}-`
+            }
+            let k = b.slice(0, -1)
+            return k
+        }
+        console.log(tring("a", 5))
+        //bài 5
+        // Viết function với đầu vào là 1 chuỗi string. Trả về chuỗi đảo ngược của chuỗi đó
+        // Ví dụ: reverseString('Hello') => 'olleH'
+        function reverseString(str) {
+            return str.split("").reverse("").join("")
+        }
+        console.log(reverseString("hello"))
+
+        //bài 6
+        // Cho 1 chuỗi, kiểm tra xem chuỗi đó có phải chuỗi đối xứng hay không 
+        //(đọc xuôi hay ngược đều như nhau, không tính khoảng trắng, không phân biệt hoa thường),
+        // Ví dụ: checkSymmetricString("Race car") => true
+        // Ví dụ: checkSymmetricString("hello world") => false
+        function palindrome(str) {
+            let len = str.length;
+            let mid = Math.floor(len / 2);
+
+            for (let i = 0; i < mid; i++) {
+                if (str[i] != str[len - 1 - i]) {
+                    return false
+                }
+            }
+            return true
+        }
+        console.log(palindrome("hello word"))
+        console.log(palindrome("aaaa"))
+
+        // bài 7
+        // Viết một function nhận vào string, trả về số lượng nguyên âm có trong string
+        // Nguyên âm:  a, o, e, u, i.
+        // Ví dụ: countNumberVowels("hello") => 2
+        // Ví dụ: countNumberVowels("hello hien") => 4
+
+
+        // bài 8
+        // Viết function kiểm tra xem một chuỗi có kết thúc bằng chuỗi khác hay không.
+        // Ví dụ : confirmEnding("hello", "lo") => true
+        // Ví dụ : confirmEnding("hello", "ll") => false
+        function streng(str, b) {
+            if (str.indexOf(b) == 3 && 4) {
+                return true
+            }
+            else {
+                return false
+            }
+        }
+        console.log(streng("hello", "lo"))
+        console.log(streng("hello", "ll"))
+        // bài 9
+        // Viết function nhập vào 1 chuỗi bất kỳ. Tìm ra ký tự không bị lặp lại trong chuỗi (không tính khoảng trắng)
+        // Ví dụ : getLetterNoRepeat("abc abce") => "e";
+        // Ví dụ : getLetterNoRepeat("abce abcdf") => "e,d,f";
+        // Ví dụ : getLetterNoRepeat("abab") => "";
+
+        //bài 10
+// Viết function nhập vào 1 chuỗi bất kỳ. Sắp xếp các ký tự trong chuỗi theo chiều tăng dần của bảng chữ cái
+// (có phân biệt chữ hoa, chữ thường). Yêu cầu loại bỏ khoảng trắng trong chuỗi trước khi sắp xếp
+// Ví dụ : sortLetters("hello world") => "dehllloorw"
+// Ví dụ : sortLetters("HellO WorLd") => "HLOWdellor"
+
+        //bài 11
+// Viết function nhập vào 1 chuỗi bất kỳ. Tìm ra ký tự không bị lặp lại trong chuỗi (không tính khoảng trắng)
+// Ví dụ : getLetterNoRepeat("abc abce") => "e";
+// Ví dụ : getLetterNoRepeat("abce abcdf") => "e,d,f";
+// Ví dụ : getLetterNoRepeat("abab") => "";
+    </script>
+</body>
+
+</html>

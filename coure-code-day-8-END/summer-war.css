@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background: rgb(245, 255, 57);
+    background-color: pink;
     font-family: sans-serif;
 }
 #container {
@@ -112,6 +112,9 @@ h3 {
     border-radius: 5px;
     border: 1px solid rgba(0,0,0,.125);
     text-align: justify;
+    position: sticky;
+    top: 0;
+
 }
 strong {
     color: #ed3c39;

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        let a = true;
+        console.log(a);
+
+        let b = false;
+        console.log(b);
+
+        console.log(!!a);
+
+
+        let c = 5;
+        console.log(Boolean(c));
+
+        let d = 5 < 4;
+        console.log(Boolean(d));
+
+        console.log(Boolean(0));
+        console.log(Boolean(""));
+
+
+        //chỉ đúng trong một trường hợp true true các trường hợp còn lại đều sai
+        console.log(Boolean(true && true))
+        //chỉ sai trong 1 trường hợp false false các trường hợp òn lại đều đúng 
+        console.log(Boolean(true || false))
+
+
+        //câu lệnh điều kiện
+        let e = 0
+        // câu lệnh if else 
+        //nếu đúng thực hiện if 
+        if (e > 0) {
+            console.log("số dương");
+        }
+        //là trường hợp có điều kiện
+        else if (e == 0) {
+            console.log("số 0")
+        }
+        //là trường hợp vô điều kiện nếu sai thực hiện else
+        else {
+            console.log("sô âm")
+        }
+
+        e > 0 ? console.log("số dương") : console.log("Số âm")
+
+        function sure(mark) {
+            if (mark >= 85) {
+                console.log("A")
+            }
+            else if (mark <= 70 && mark <= 85) {
+                console.log("B")
+            }
+            else if (mark <= 40 && mark < 70) {
+                console.log("C")
+            }
+            else {
+                console.log("D")
+            }
+        }
+        let nunber = sure(Math.random(Math.random() * 100))
+
+        function number2(v) {
+            if (v > 0) {
+                console.log("số dương")
+            }
+
+            else if (v = 0) {
+                console.log("số không")
+            }
+            else {
+                console.log("số âm")
+            }
+
+        }
+        let sosanh = number2(Math.random(Math.random() * 100))
+
+        function number3(n) {
+            if (n % 2) {
+                console.log("số chẵn")
+            }
+            else {
+                console.log("số lẻ")
+            }
+        }
+        let chanle = number3(Math.random(Math.random() * 100))
+
+        // function number4 (m) {
+        //     if (m % 3 && m % 5) {
+        //         console.log("chia hết cho cả 3 và 5")
+        //     }
+        //     else if(m % 3) {
+
+        //     }
+        // }
+
+        //
+        let num = 3;
+        switch (num) {
+            case 1:
+                console.log("Một");
+                break //
+            case 2:
+                console.log("Hai");
+                break
+            //có thể gộp nhiều trường hợp nếu giá trị bằng nhau
+            case 3:
+            case 4:
+            case 5: //....
+                console.log('Ba');
+                break
+            default:
+                console.log("không tìm thấy");
+                break
+        }
+        let day = 12;
+        switch (day) {
+            case 0:
+                console.log("Hôm nay là chủ nhật")
+                break
+            case 1:
+                console.log("Hôm nay là thứ 2")
+                break
+            case 2:
+                console.log("Hôm nay là thứ 3")
+                break
+            case 3:
+                console.log("Hôm nay là thứ 4")
+                break
+            case 4:
+                console.log("Hôm nay là thứ 5")
+                break
+            case 5:
+                console.log("Hôm nay là thứ 6")
+                break
+            case 6:
+                console.log("Hôm nay là thứ 7")
+                break
+
+        }
+        let month = 12
+        switch (month) {
+            case 1:
+            case 2:
+            case 3:
+                console.log("mùa xuân")
+                break
+            case 4:
+            case 5:
+            case 6:
+                console.log("mùa hạ")
+                break
+            case 7:
+            case 8:
+            case 9:
+                console.log("mùa thu")
+                break
+            case 10:
+            case 11:
+            case 12:
+                console.log("mùa đông")
+                break
+        }
+
+        for (let i = 1; i < 11; i++)  //i++ tương ứng với i+1
+        {
+            if (i == 5) {
+                break  //thoát ra ngoài vòng lặp
+            }
+            if (i % 2 == 1) {
+                continue  //bỏ qua vòng lặp hiện tại
+            }
+            console.log(i);
+        }
+        let sam = 0
+        for (let g = 1; g < 11; g = g + 1) {
+            sam = sam + g
+        }
+        let sum = 0
+        for (let h = 1; h < 101; h = h + 1) {
+            if (h % 2 == 1) {
+                sum = sum + h
+            }
+        }
+
+
+        let number5 = [1, 2, 3, 4, 5, 6, 7, 'Hà Nội', true, false];
+        console.log(number5);
+        console.log(number5.length)
+        // console.log(number[7]);
+
+        number5[7] = "Hải Phòng";
+        console.log(number5);
+
+        //nuber5[number5.length - 1]
+
+        console.log();
+
+        //các phương thức 
+        let number6 = [1, 2, 3, 4, 5, 6, 7,];
+        console.log(number6);
+
+        //thêm vào cuối mảng
+        number6.push(8);
+
+        //xóa 1 phần tử ở cuối mảng
+        number6.pop();
+        console.log(number6);
+
+        //thêm một phần tử ở đầu mảng
+        number6.unshift(0);
+        console.log(number6);
+
+        //xóa một phần tử ở đầu mảng
+        number6.shift();
+        console.log(number6);
+
+            //xóa hoặc thêm phần từ ở một vị trí bất kì
+            //sử dụng với mục đích xóa ()
+            number6.splice(1, 1);
+        console.log(number6);
+
+        //sử dụng với mục đích thêm phần tử
+        //thay đổi trực tiếp mảng ban đầu
+        //số pt cần xóa ; vị trí phần tử cần xóa ; thêm phần tử
+        number6.splice(0, 0, 10, 11, 12);
+        console.log(number6);
+
+        //gộp hai mảng với nhau - dùng phương thức concat
+        let number7 = [3, 2, 1]
+        let number8 = number6.concat(number5);
+        console.log(number8);
+
+        //duyệt mảng thông qua chỉ số của nó
+        let sem = 0
+        for (let i = 0; i < number6.length; i++) {
+            //  console.log(number6[i]);
+            sem = sem + number6.length
+
+        }
+
+
+    </script>
+</body>
+
+</html>

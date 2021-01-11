@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //includes
+        // true : nếu 1 phần tử nằm trong mảng
+        // false : nếu 1 phần tử không nằm trong mảng
+        //vd
+        function check(arr, ele) {
+            return arr.includes(ele)
+        }
+        console.log(check([1, 2, 3, 4, 5]), 4)
+        console.log(check([1, 2, 3, 4, 5]), 5)
+
+
+
+        let str = "hello world";
+        //indexOf ; lastindexOf
+        console.log(str.indexOf("lo"));
+        console.log(str.indexOf("loo"));
+
+        console.log(str.lastIndexOf("o"));
+        console.log(str.lastIndexOf("loo"));
+
+        //imcludes
+        console.log(str.includes("o"))
+        console.log(str.includes("loo"))
+
+        //slice 
+        console.log(str.slice(0, 5))
+        console.log(str.slice(6))
+        console.log(str.slice())
+        console.log(str.slice(str.length - 1))
+        console.log(str.slice(-1))
+        console.log(str.slice(-5))
+
+        // substring
+        // như slice nhưng không nhận chỉ số âm
+        console.log(str.substring(0, 5))
+        console.log(str.substring(6))
+        console.log(str.substring())
+        console.log(str.substring(str.length - 1))
+
+        //substr
+        //cắt chuỗi tham số đầu là vị trí bắt đầu - sau là chiều dài của chuỗi
+        console.log(str.substr(0, 5))
+
+        //chữ in thường - in hoa
+        // chữ in Hoa
+        console.log(str.toUpperCase())
+        //chữ in thường
+        console.log(str.toLowerCase())
+
+        //cộng chuỗi - nối chuỗi
+        console.log(str.concat("abc", "haha", "hihi"))
+
+        //loại bỏ khoảng trắng ở đầu - cuối chuỗi
+        let str1 = "    hihi "
+        console.log(str1.trim())
+
+        //charAt
+
+        console.log(str.charAt(0))
+        console.log(str.charAt(1))
+
+        // phương thức chuyển từ chuỗi thành mảng và ngược lại "split"
+        console.log(str.split(" "))
+        console.log(str.split(""))
+        console.log(str.split("o")) // lấy "o" làm vạch phân cách và xóa o đi
+        console.log(str.split("k"))
+
+        //bài tập 1
+       
+        
+
+
+
+
+
+    </script>
+</body>
+
+</html>
