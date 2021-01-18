@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        // cách khai báo obj rỗng
+        let obj = {}
+        // cách khai báo obj rỗng có giá trị
+        let user = {
+            name: "Nguyễn Văn A",
+            age: 1992,
+            isStatus: true,
+            skill: ['PHP', 'Java', 'Golang'],
+            adress: {
+                city: "Hà Nội",
+            },
+            sayHello: function () {
+                console.log("Xin Chào Các Bạn")
+            },
+            getAge: function () {
+                this.age = 2020 - 1992
+                console.log(user)
+            },
+            changeName: function () {
+                this.name = "Đinh Vương Hoàng" //this là đối tượng đang thưc thi ngữ cảnh hiện tại
+                console.log(user)              //ví dụ về thi
+            }                               // cậu biết anh Nam không. this[Anh ấy] đá bóng rất giỏi
+        };                                  //this là từ thay thế
+
+        // lấy giá trị trong obj
+        console.log(user.name);
+        console.log(user.skill);
+        console.log(user.skill[1]);
+        console.log(user.adress.city);
+
+        console.log(user['name']);
+        console.log(user['skill']);
+
+        // thay đổi giá trị 
+        user.name = "Ngô Văn B";
+        console.log(user);
+
+        //thêm key mới
+        user.email = "asdasd@gmail.com";
+        console.log(user);
+
+        //xóa key
+        delete user.email;
+        console.log(user);
+
+        user.sayHello();
+        user.getAge();
+        user.changeName();
+
+        //method object
+        //Lấy ra danh sách key
+        console.log(Object.keys(user));
+
+        //lấy ra danh sách values
+        console.log(Object.values(user))
+
+        // kiểm tra xem một key có tồn tại trong object hay không
+        //trả về true - false
+        console.log(user.hasOwnProperty('name'));
+        console.log(user.hasOwnProperty('name1'));
+
+        //BTVN
+        //bài 1
+        let grades = [
+            { name: 'John', grade: 8, sex: 'M' },
+            { name: 'Sarah', grade: 12, sex: 'F' },
+            { name: 'Bob', grade: 16, sex: 'M' },
+            { name: 'Johnny', grade: 2, sex: 'M' },
+            { name: 'Ethan', grade: 4, sex: 'M' },
+            { name: 'Paula', grade: 18, sex: 'F' },
+            { name: 'Donald', grade: 5, sex: 'M' },
+            { name: 'Jennifer', grade: 13, sex: 'F' },
+            { name: 'Courtney', grade: 15, sex: 'F' },
+            { name: 'Jane', grade: 9, sex: 'F' },
+        ]
+
+        // 1. Tìm thứ hạng trung bình của cả lớp 
+        function splace(arr) {
+            let num = 0
+            for (i = 0; i < arr.length; i++) {
+                num = num + arr[i].grade
+            }
+            return num / arr.length
+
+        }
+        console.log(splace(grades))
+
+        // 2. Tìm thứ hạng trung bình của nam trong lớp
+        function male(arr) {
+            let male = 0
+            let total = 0
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i].sex === 'M') {
+                    total = total + arr[i].grade
+                    male++
+                }
+
+            }
+            return total / male
+        }
+        console.log(male(grades))
+
+        // 3. Tìm thứ hạng trung bình của Nữ trong lớp
+        function feMale(arr) {
+            let feMale = 0
+            let total = 0
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i].sex === 'F') {
+                    total = total + arr[i].grade
+                    feMale++
+                }
+            }
+            return total / feMale
+        }
+        console.log(feMale(grades))
+
+        
+        // 4. Tìm thứ hạng cao nhất của nam trong lớp
+        function maxPlace(arr) {
+            let male = 0 
+            let total = 0 
+            let newArr = []
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i].sex === 'M') {
+                    newArr.push(arr[i].sex)
+                }
+            }
+            
+            let max = newArr[0].grade
+            for (i = 0; i < newArr.length; i++) {
+                if (newArr[i].grade > max) {
+                    max = newArr[i].grade
+                }
+            }
+             return max
+
+        } 
+        console.log(maxPlace(grades))
+
+//         4. Tìm thứ hạng cao nhất của Nam trong lớp 
+// 5. Tìm thứ hạng cao nhất của Nữ trong lớp
+// 6. Tìm thứ hạng thấp nhất của Nam trong lớp 
+// 7. Tìm thứ hạng thấp nhất của Nữ trong lớp 
+// 8. Tìm thứ hạng cao nhất của cả lớp 
+// 9. Tìm thứ hạng thấp nhất của cả lớp
+// 10. Lấy ra danh sách tất cả học viên nữ trong lớp
+// 11. Sắp xếp tên học viên theo chiều tăng dần của bảng chữ cái
+// 12. Sắp xếp thứ hạng học viên theo chiều giảm dần
+// 13. Lấy ra học viên nữ có tên bắt đầu bằng "J"
+// 14. Lấy ra top 5 người có thứ hạng cao nhất
+
+        // phần 2
+        function sum(a, b) {
+            return a + b
+        }
+
+        // khai báo function sử dung arow function
+        let sum1 = (a, b) => {
+            return a + b
+        }
+
+        //có thể return luôn nếu chỉ có 1 dòng
+        let sum2 = (a, b) => a + b
+
+        let sayHello = () => console.log("xin chào")
+
+        let sayHello1 = name => console.log("xin chào")
+
+        console.log(sum1(3, 4));
+        sayHello()
+        sayHello1('Nguyễn Văn A')
+
+        // let findMax = arr => {
+            
+        //     for (i = 0; i < arr.length; i++) {
+        //         if (a[i] > max) {
+                    
+        //         }
+        //     }
+            
+        // }
+        // findMax([1, 4, 56, 77])
+
+        //phương thức duyệt mảng forEach chỉ dùng để duyệt mảng thôi
+        let number = [1, 2, 3, 4, 5]
+        let result = 0
+        number.forEach((v) => {
+            if (v % 2 == 0){
+                result += v
+            }
+            
+        })
+        console.log(result)
+
+        // map phương thức duyệt mảng 
+        //lặp qua các phần tử của mảng. có khả năng thao tác với các phần tử của mảng . trả về mảng mới có độ dài = mảng ban đầu
+        let number1 = number.map(ele => ele * 2 )
+        console.log(number1)
+
+        //filter === for với if
+        let number2 = number.filter(ele => ele > 2)
+        console.log(number2)
+
+        //find trả về phần tử đầu tiên mà nó tìm thấy khi nó thỏa mãn điều kiện
+        let number3 = number.find(ele => ele > 2 ) 
+        console.log(number3)
+
+        //findIndex : trả về chỉ số / vị trí đầu tiên thỏa mãn điều kiện
+        let number4 = number.findIndex(ele => ele > 2 )
+        console.log(number4)
+
+        //every : tất cả thỏa mãn điều kiện => true 
+        // chỉ 1 phần tử khooeng thỏa mãn => false
+        let number5 = number.every(ele => ele > 0 )
+        console.log(number5)
+
+        let number6 = number.every(ele => ele > 3 )
+        console.log(number6)
+
+        //some chỉ cần 1 phần tử thỏa mãn => true
+        let number7 = number.some(ele => ele > 4.5 )
+        console.log(number7)
+        
+        let number8 = number.some(ele => ele > 5 )
+        console.log(number8)
+
+        //bài 4
+        let findMaxLangthElement = (arr) => {
+            let arrLength = arr.map(ele => ele.length)
+            let maxLength = Math.max(...arrLength)
+            return arr.filter(ele => ele.length == maxLength)
+        };
+        console.log(findMaxLangthElement(["aba", "aa", "ad", "c", "vcd"]))
+
+        //bài 6
+        let removeDuplivates = arr => arr.filter((v,i) => arr.indexOf(v) == i)
+            console.log(removeDuplivates([1,2,2,3,4,5,5,6]))
+
+        //bài 2
+        let max2Number = arr => {
+            //remove duplicatse
+            let newArr = removeDuplivates (arr);
+            let sortArr = newArr.sort((a,b) => b - a)
+            return sortArr[1]
+        }
+        console.log(max2Number([2,1,3,4,4]))
+        
+
+
+    </script>
+</body>
+
+</html>

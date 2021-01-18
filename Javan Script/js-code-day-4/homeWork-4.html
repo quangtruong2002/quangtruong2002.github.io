@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        function checkElement(a, b) {
+            // if (a.includes(b)) {
+            //     return true
+            // }
+            // else {
+            //     return false
+            // }
+            return a.includes(b)
+        }
+        let alan = checkElement("i love you", "hate")
+        console.log(alan)
+        console.log(checkElement("i love you", "you"))
+
+
+
+        // Bài 2 
+        function cutlength(str) {
+            if (str.length >= 8) {
+                let c = str.slice(0, 9)
+                return c.concat("...")
+
+            }
+            else {
+                return c
+            }
+        }
+        let Element = cutlength("Xin chào các bạn")
+        console.log(Element)
+
+        //bài 3
+        // Viết function có tác dụng biến 1 chuỗi thành chuỗi chỉ viết hoa từ đầu tiên.
+        // Ví dụ: capitalizeString('chÀo MừnG đẾn với techMaster') => 'Chào Mừng Đến Với Techmaster'
+        function toUpper(str) {
+            return str
+                .toLowerCase()
+                .split(' ')
+                .map(function (word) {
+                    word[0]
+                    word.substr(1)
+                    return word[0].toUpperCase() + word.substr(1)
+                })
+                .join(' ')
+        }
+        console.log(toUpper('chÀo MừnG đẾn với techMaster'))
+
+
+
+        //bài 4
+        function tring(str, a) {
+            let b = ""
+            for (let i = 0; i < a; i++) {
+                b += `${str}-`
+            }
+            let k = b.slice(0, -1)
+            return k
+        }
+        console.log(tring("a", 5))
+        //bài 5
+        // Viết function với đầu vào là 1 chuỗi string. Trả về chuỗi đảo ngược của chuỗi đó
+        // Ví dụ: reverseString('Hello') => 'olleH'
+        function reverseString(str) {
+            return str.split("").reverse("").join("")
+        }
+        console.log(reverseString("hello"))
+
+        //bài 6
+        // Cho 1 chuỗi, kiểm tra xem chuỗi đó có phải chuỗi đối xứng hay không 
+        //(đọc xuôi hay ngược đều như nhau, không tính khoảng trắng, không phân biệt hoa thường),
+        // Ví dụ: checkSymmetricString("Race car") => true
+        // Ví dụ: checkSymmetricString("hello world") => false
+        function palindrome(str) {
+            let len = str.length;
+            let mid = Math.floor(len / 2);
+
+            for (let i = 0; i < mid; i++) {
+                if (str[i] != str[len - 1 - i]) {
+                    return false
+                }
+            }
+            return true
+        }
+        console.log(palindrome("hello word"))
+        console.log(palindrome("aaaaaaaaa"))
+
+        // cach 2
+        "race car".split(" ").join("") //cách loại bỏ khoảng trống ngắn 
+
+        // bài 7
+        // Viết một function nhận vào string, trả về số lượng nguyên âm có trong string
+        // Nguyên âm:  a, o, e, u, i.
+        // Ví dụ: countNumberVowels("hello") => 2
+        // Ví dụ: countNumberVowels("hello hien") => 4
+       
+
+        // bài 8
+        // Viết function kiểm tra xem một chuỗi có kết thúc bằng chuỗi khác hay không.
+        // Ví dụ : confirmEnding("hello", "lo") => true
+        // Ví dụ : confirmEnding("hello", "ll") => false
+        function streng(str, b) {
+            if (str.indexOf(b) == 3 && 4) {
+                return true
+            }
+            else {
+                return false
+            }
+        }
+        console.log(streng("hello", "lo"))
+        console.log(streng("hello", "ll"))
+
+        //cach 2
+        "hello".endsWith("lo")
+        "hello".endsWith("klo")
+
+        // bài 9
+        // Viết function lấy ra những chữ cái đầu của từng từ trong chuỗi, các chữ cái đầu được phân tách với nhau bằng dấu cách
+        // Ví dụ : getFirstLetter("xin chào các bạn") => "x c c b"
+        // Ví dụ : getFirstLetter("hello world") => "h c"
+        function getFirstLetter (str) {
+            let arr = str.split(' ')
+            let newArr = []
+            for (let i = 0; i < arr.length; i++) {
+                newArr.push(arr[i].charAt(0)); 
+            }
+            
+             return newArr.join(' ')
+             
+        } 
+        console.log(getFirstLetter("xin chào các bạn"))
+
+        //bài 10
+        // Viết function nhập vào 1 chuỗi bất kỳ. Sắp xếp các ký tự trong chuỗi theo chiều tăng dần của bảng chữ cái
+        // (có phân biệt chữ hoa, chữ thường). Yêu cầu loại bỏ khoảng trắng trong chuỗi trước khi sắp xếp
+        // Ví dụ : sortLetters("hello world") => "dehllloorw"
+        // Ví dụ : sortLetters("HellO WorLd") => "HLOWdellor"
+        function sortLetters(str) {
+            let arr = str.split(' ').join('').split('')
+            return arr.sort().join('')
+        }
+        console.log(sortLetters("HellO WorLd"))
+
+
+        //bài 11
+        // Viết function nhập vào 1 chuỗi bất kỳ. Tìm ra ký tự không bị lặp lại trong chuỗi (không tính khoảng trắng)
+        // Ví dụ : getLetterNoRepeat("abc abce") => "e";
+        // Ví dụ : getLetterNoRepeat("abce abcdf") => "e,d,f";
+        // Ví dụ : getLetterNoRepeat("abab") => "";
+        let string11 = 'ababc defgdg '
+        function getLetterNoRepeat(str) {
+            let arr = string11.trim().split(' ').join('').split('')
+
+            //tìm ra các phần tử bị lặp lại                        Bước 1 tìm ra các phần tử bị lặp lại
+            let newArr = []                                          //trước tiên từng chữ ra bằng split và join 
+            for (let i = 0; i < arr.length; i++) {                   //sau đó tạo ra một mảng rống với tên là newArr
+                if (arr.indexOf(arr[i]) != i) {                      //tạo ra một vòng lặp for 
+                    newArr.push(arr[i])                              // đặt vào đó một điều kiện if sử dụng indexOf để tìm ra các phần tử bị lặp lại 
+                }                                                    // sau đó sử dụng push để đưa chúng vào mảng rỗng newArr
+            }
+            //xóa bỏ phần tử lặp lại                               Bước 2 xóa bỏ các phần tử bị lặp lại 
+            let finalArr = []                                        //tạo một mảng rỗng
+            for (let i = 0; i < arr.length; i++) {                   //sử dụng phương thức như trên tìm ra những phần tử bị lặp lại và xóa bỏ chúng
+                if (newArr.indexOf(arr[i]) == -1) {
+                    finalArr.push(arr[i])
+                }
+            }
+            let result = ''
+            //in ra chuỗi gồm ký tự không bị lặp lại               Bước 3 in ra những kí tự hông bị lặp lại    
+            if (finalArr.length == 0) {                              //sử dụng if với đk finalArr.length == 0 
+                result = '""'                                        // và resutl "" để tạo ra ngoặc kép cho từng phần tử
+            }                                                        // sau đó sử dụng join để tạo ra vạch ngăn cách giữa các phần tử bằng giấu phẩy
+            result = finalArr.join(',')                          //kết return vaf console.log nó ra và tận hưởng thành quả 
+            return result                                            //uống nước ăn bánh 10p rồi ngồi cày bài tiếp thôi :>>
+        }
+        console.log(getLetterNoRepeat(string11))
+    //loại bỏ khoảng trống
+    // tách từng từ ra
+    //từ đó sắp xếp thay đổi viết hoa thành viết thường
+
+    </script>
+</body>
+
+</html>
