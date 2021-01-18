@@ -17,16 +17,16 @@
         // Ví dụ: checkElementExist([1,2,3,4], 5) => false
         function checknumber(a, b) {
             if (a.indexOf(b) === -1) {
-                console.log(false)
+                return false
             }
             else {
-                console.log(true)
+                return true
             }
+
         }
 
-        checknumber([1, 2, 3, 4, 5, 6, 7], 5);
-        checknumber([1, 2, 3, 5, 6], 66)
-
+        console.log(checknumber([1, 2, 3, 4, 5, 6, 7], 5))
+        
         //bài2
         //Viết function tìm ra số lớn thứ nhì trong mảng các số. 
         // Ví dụ: max2Numbers([2, 1, 3, 4]) => 3
@@ -48,9 +48,10 @@
                     max2 = a[i];
                 }
             }
-            console.log(max2)
+            return max2
         }
         let acc = arrnumber([12, 23, 54, 43, 56])
+        console.log(acc)
 
 
         //bài 3 cái này nó vẫn thế mỗi tội không có số 0 thôi anh khỏi phải check cho mất công nhá :>
