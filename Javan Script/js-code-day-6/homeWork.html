@@ -88,71 +88,71 @@
                 if (arr[i].sex === 'F') {
                     newArr.push(arr[i].grade)
                 }
-                 
+
             }
             let result = Math.max(...newArr)
             return result
         }
         console.log(maxPlaceFemale(grades))
-// 6. Tìm thứ hạng thấp nhất của Nam trong lớp
+        // 6. Tìm thứ hạng thấp nhất của Nam trong lớp
         function minPlaceMale(arr) {
             let newArr = []
-            for (let i = 0; i < arr.length; i++ ) {
+            for (let i = 0; i < arr.length; i++) {
                 if (arr[i].sex === 'M') {
                     newArr.push(arr[i].grade)
                 }
-                
+
             }
             let result = Math.min(...newArr)
             return result
         }
         console.log(minPlaceMale(grades))
-// 7. Tìm thứ hạng thấp nhất của Nữ trong lớp 
-       function minPlaceFemale(arr) {
-           let newArr = []
-           for (let i = 0; i < arr.length; i++) {
-               if (arr[i].sex === 'F') {
-                   newArr.push(arr[i].grade)
-               }
-           }
-           let result = Math.min(...newArr)
-           return result
-       }
-       console.log(minPlaceFemale(grades))
-// 8. Tìm thứ hạng cao nhất của cả lớp 
-       function findFistclass(arr) {
-           max = arr[0].grade
-          for (let i = 0; i < arr.length; i++) {
-              if (arr[i].grade > max) {
-                  max = arr[i].grade
-              }
-          }
-          return max
-       } 
-       console.log(findFistclass(grades))
-// 9. Tìm thứ hạng thấp nhất của cả lớp
-       function findLastclass(arr) {
-           let min = arr[0].grade 
-           for (let i = 0; i < arr.length; i++) {
-               if (arr[i].grade < min){
-                   min = arr[i].grade 
-               }
-           }
-           return min
-       }
-       console.log(findLastclass(grades))
-// 10. Lấy ra danh sách tất cả học viên nữ trong lớp
-       function listFemale(arr) {
-           let newArr = []
-           for (let i = 0; i < arr.length; i++) {
-               if (arr[i].sex === 'F')
-                newArr.push(arr[i])
-           }
-           return newArr
-       }
-       console.log(listFemale(grades))
-// 11. Sắp xếp tên học viên theo chiều tăng dần của bảng chữ cái
-       function sortNameByUp(arr) {
+        // 7. Tìm thứ hạng thấp nhất của Nữ trong lớp 
+        function minPlaceFemale(arr) {
+            let newArr = []
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].sex === 'F') {
+                    newArr.push(arr[i].grade)
+                }
+            }
+            let result = Math.min(...newArr)
+            return result
+        }
+        console.log(minPlaceFemale(grades))
+        // 8. Tìm thứ hạng cao nhất của cả lớp 
+        function findFistclass(arr) {
+            max = arr[0].grade
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].grade > max) {
+                    max = arr[i].grade
+                }
+            }
+            return max
+        }
+        console.log(findFistclass(grades))
+        // 9. Tìm thứ hạng thấp nhất của cả lớp
+        function findLastclass(arr) {
+            let min = arr[0].grade
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].grade < min) {
+                    min = arr[i].grade
+                }
+            }
+            return min
+        }
+        console.log(findLastclass(grades))
+        // 10. Lấy ra danh sách tất cả học viên nữ trong lớp
+        function listFemale(arr) {
+            let newArr = []
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].sex === 'F')
+                    newArr.push(arr[i])
+            }
+            return newArr
+        }
+        console.log(listFemale(grades))
+        // 11. Sắp xếp tên học viên theo chiều tăng dần của bảng chữ cái
+        function sortNameByUp(arr) {
             let newArr = []
             let newArr2 = []
             for (let i = 0; i < arr.length; i++) {
@@ -160,29 +160,29 @@
                     newArr.push(arr[i].name)
                 }
             }
-            
+
             return newArr.sort()
         }
         console.log(sortNameByUp(grades))
-// 12. Sắp xếp thứ hạng học viên theo chiều giảm dần
+        // 12. Sắp xếp thứ hạng học viên theo chiều giảm dần
         function sortRankByDown(arr) {
             let newArr = []
             for (let i = 0; i < arr.length; i++) {
                 newArr.push(arr[i].grade)
             }
-           newArr.sort(function(a, b){ return a - b })
-           return newArr
-            
+            newArr.sort(function (a, b) { return a - b })
+            return newArr
+
         }
         console.log(sortRankByDown(grades))
-        
-// 13. Lấy ra học viên nữ có tên bắt đầu bằng "J"
+
+        // 13. Lấy ra học viên nữ có tên bắt đầu bằng "J"
         function findFemail(arr) {
             let newArr = []
             //tìm học sinh nữ
             for (i = 0; i < arr.length; i++) {
                 if (arr[i].sex === 'F') {
-                    newArr.push(arr[i].name.charAt( 0));
+                    newArr.push(arr[i].name.charAt(0));
                 }
             }
             let newArr3 = []
@@ -190,33 +190,39 @@
                 if (newArr[i] === 'J') {
                     newArr3.push(newArr[i])
                 }
-            } 
+            }
             return newArr3
         }
         console.log(findFemail(grades))
-// 14. Lấy ra top 5 người có thứ hạng cao nhất
+        // 14. Lấy ra top 5 người có thứ hạng cao nhất
         function top5PersonFindclass(arr) {
-            
+
             let newArr = []
             for (let i = 0; i < arr.length; i++) {
                 newArr.push(arr[i].grade)
             }
-           newArr.sort(function(a, b){ return a - b })
-           return newArr.slice(5)
+            newArr.sort(function (a, b) { return a - b })
+            return newArr.slice(5)
         }
         console.log(top5PersonFindclass(grades))
 
+        console.log("------------------------------------------------------------")
 
 // Bài 1: Viết function truyền vào 1 mảng. Kiểm tra mảng đó có phải là mảng tăng dần hay không
-
-
+let checkUpArr = arr =>  arr.filter(ele => arr[i] > arr[i + 1])
+               
+        
+        console.log(checkUpArr([1, 2, 3, 4, 5, 6]));
 
 // Bài 2: Viết function truyền vào 1 mảng. Tìm số lớn nhất trong mảng
-
+        let findMaxArray = arr => Math.max(...arr)
+        console.log(findMaxArray([1,54,76,2,25,104,86]))
 
 // Bài 3: Viết function để lấy một mảng bao gồm các phần tử xuất hiện trong cả hai mảng
 // Ví dụ: similarity([1, 2, 3], [1, 2, 4]) => [1,2]
-
+        let findElement = (arr1, arr2) => arr1.filter(ele => arr2.includes(ele))
+        console.log(findElement([1,2], [1,2,4,6])) 
+ 
 // Bài 4: Viết một chương trình JavaScript để lấy sự phần tử không xuất hiện ở cả 2 mảng
 // symmetricDifference([1, 2, 3], [1, 2, 4]) => [3,4]
 

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1 id="heading">đây là thẻ heading</h1>
+    <p>Thẻ para 1</p>
+    <p class="para">thẻ para 2</p>
+    <p class="para"> thẻ para 3</p>
+    <div class="box">
+        <ul>
+            <li style="display: block;">Thẻ li 1</li>
+            <li>Thẻ li 2</li>
+            <li>Thẻ li 3</li>
+            <li>Thẻ li 4</li>
+            <!-- <li>Thẻ li 5</li>  -->
+            <!-- khi coment lại cũng tính là 1 textNote -->
+
+        </ul>
+    </div>
+
+    <script>
+        // truy cập thông qua id
+        // chỉ trả về 1 phần tử duy nhất
+        let heading = document.getElementById('heading');
+        console.log(heading);
+
+        //truy cập thông qua Tag
+        //trả về 1 danh sách phần tử nhưng khi muốn truy cập 1 pt cụ thể ta phải ghi rõ chỉ số của nó ra
+        let p = document.getElementsByTagName('p');
+        console.log(p)
+        console.log(p.length)
+        console.log(p[0])
+        console.log(p[1])
+        let h1 = document.getElementsByTagName('h1')
+        console.log(h1[0])
+
+        //truy cập thông qua class name
+        //như truy cập trông qua tag
+        let p_classname = document.getElementsByClassName('para')
+        console.log(p_classname)
+
+        //truy cập thông qua css Selector
+        //Trả về phần tử đầu tiên tìm thấy
+        let h1_css = document.querySelector('#heading');
+        console.log(h1_css) // thường dùng id
+
+        let para_css = document.querySelector('.para')
+        console.log(para_css) // thường dùng class
+
+        let para3 = document.querySelector(' p:nth-child(4)')
+        console.log(para3)
+
+        let p_all = document.querySelector('p')
+        console.log(p_all) // thường dùng all
+
+
+        let box = document.querySelector('.box')
+        console.log(box.parentNode);
+        console.log(box.nextElementSibling) // anh em liền kề sau
+        console.log(box.previousElementSibling)  // anh em liền kề trước
+        console.log(box.childNodes); // trả về chính bản thân nó và các thành phần con của con nó
+        console.log(box.children) // trả về đúng phần tử con của nó
+
+        let ul = document.querySelector('ul')
+        console.log(ul)
+        console.log(ul.childNodes)
+        console.log(ul.firstChild) // chả về phần tử con đầu tiên
+        console.log(ul.children) // chả về các thành phần con của nó
+
+        // get/set  content
+        //
+        //
+        console.log(heading.innerHTML);
+        console.log(heading.innerText);
+        console.log(heading.textContent);
+
+        console.log(ul.innerHTML) // trả về cả tên thẻ và nội dung của thẻ
+        console.log(ul.innerText) //chỉ lấy nội dung và không giữ khoảng trống .không thể lấy thẻ ẩn 
+        console.log(ul.textContent) //chỉ lấy nội dung và có giữ khoảng trống có thể lấy thẻ ẩn
+
+        heading.innerHTML = "xin chào";  //chỉ riêng innerHTML có thể chèn thẻ vào dạng  thẻ
+        heading.innerText = "hello";
+
+        // Thay đổi style của phần tử kiểu inlinestyle
+        heading.style.color = 'red'
+        heading.style.backgroundColor = '#000'
+
+        // Tạo phần tử DOM
+        let para4 = document.createElement('p')
+        para4.innerText = 'thẻ para4'
+        para4.id = 'para4'
+        para4.className = 'para'
+        console.log(para4)
+
+        //Gắn vào DOM (thêm phần tử)
+        // cách truy cập trực tiếp vào body mà không cần phải truy cập cào các phương thức khác
+        //chỉ có body mới cần dùng đến thẻ document ở đầu
+        document.body.prepend(para4); // prepend là phương thức dùng để thêm vào phần đầu của thằng cha
+        document.body.appendChild(para4) // là phương thức chèn vào cuối
+
+        //tạo thẻ li và chèn vào đầu ul
+        let li5 = document.createElement('li')
+        li5.innerText = 'Thẻ li 5'
+        ul.appendChild(li5)
+
+        // chèn thêm một thẻ p vào giữa body và phần tử con của nó
+
+        let newPara = document.createElement('p')
+        newPara.innerText = 'newPara';
+
+        let para2 = document.querySelector('.para')
+
+        document.body.insertBefore(newPara, para2)
+
+        console.log('-----------------------------')
+        // chèn li vào giữa thẻ li 3 và 4
+        let newPara2 = document.createElement('li')
+        newPara2.innerText = 'newPara'
+
+        let para6 = document.querySelector(' li:nth-child(4)')
+
+        ul.insertBefore(newPara2, para6)
+
+        // xóa phần tử
+        let para10 = document.querySelector('p')
+        document.body.removeChild(para10)
+
+        // bt xoá thẻ li bất kì trong 
+        let para1 = document.querySelector(' li:nth-child(4)')
+        ul.removeChild(para1)
+
+        // thay thế
+        let link = document.createElement('a')
+        link.innerText = 'google'
+        link.href = 'http://google.com'
+        link.target = '_blank';
+
+        document.body.replaceChild(link, para2)
+
+        // bài tập 
+        //tạo thẻ input thay thế cho thẻ para3
+        let input = document.createElement('input')
+        input.placeholder = "nhập tên"
+        input.type = "text"
+        input.autocomplete = "off"
+
+        document.body.replaceChild(input, para3)
+
+        //sao chép phần tử / chỉ cần nhớ cú pháp
+        let ulcopy = ul.cloneNode(true);
+        document.body.appendChild(ulcopy);
+
+
+        // truy cập cục bộ
+        // let box = document.querySelector('.box')
+        // let liClass = box.getElementById('.li');
+
+
+
+
+    </script>
+</body>
+
+</html>
