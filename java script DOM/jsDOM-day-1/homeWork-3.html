@@ -36,9 +36,14 @@
 
     <script>
         // Bài 1: Highlight tất cả các từ có độ dài lớn hơn hoặc bằng 8 ký tự trong đoạn văn (background = "yellow")
-        function backgroundColor(cl) {
-
-        }
+        let para = document.querySelector('p')
+        let content = para.innerText
+        .split(' ')
+        .map(word => word.length >= 8 ? `<span style="background:yellow">${word}</span> ` : word)
+        .join(' ')
+        para.innerHTML = content
+        console.log(content) 
+        
         
         // bài 2: Thêm link hiển thị text "facebook" link đến trang facebook.com ở sau thẻ p
         let link = document.createElement('a')
@@ -51,16 +56,31 @@
         
 
         // bài 3. Đếm số từ có trong đoạn văn. Tạo 1 thẻ div để hiển thị số từ
-        let p = document.querySelector('p')
-        let str = p.length
+        let wordCount = para.textContent.split(' ').length
+
+        let div = document.createElement('div')
+        div.innerText = `${wordCount} words`
+        document.body.appendChild(div)
         
-        console.log(p)
-        
-         let div = document.createElement('div')
-         div.innerText = `đoạn văn dài ${str} từ`
-         document.body.appendChild(div)
 
         // Bài 4: thay thế ký hiệu ? => 🤔 và ! => 😲
+         para.innerText = para.innerText.replace(/\?/g, '🤔') //replace laf mootj hamf cuar string có tác dụng thay thế chuỗi
+         para.innerText = para.innerText.replace(/\!/g, '😲') //g = global thay thees toanf bộ
+        //cách2                                              //m = thay thế nhiều dòng
+        //   para.innerText = para.innerText                    //i = viết hoa viết thường
+        // .split(' ')
+        // .map(word => {
+        //     if (word == '?') {
+        //         word = '🤔'
+        //     }
+        //     if(word == '!') {
+        //         word = '😲'
+        //     }
+        //     return word
+        // })        
+        // .join('')      
+                                                        
+        
     </script>
 </body>
 

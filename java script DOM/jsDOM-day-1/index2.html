@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">đây là thẻ heading</h1>
+    <p>Thẻ para 1</p>
+    <p class="para">thẻ para 2</p>
+    <p class="para"> thẻ para 3</p>
+
+    <!-- <p class="para"> thẻ para 4</p> -->
+    <div class="box">
+        <ul>
+            <li style="display: none;">Thẻ li 1</li>
+            <li class="li">Thẻ li 2</li>
+            <li>Thẻ li 3</li>
+            <li>Thẻ li 4</li>
+
+        </ul>
+
+        <script>
+            let li4 = document.createElement('p')
+            li4.innerText = 'thẻ para 4'
+            
+
+            let box = document.querySelector('.box')
+            let li3 = document.querySelector('p:nth-child(4)');
+            let li5 = document.querySelector('li:nth-child(4)');
+            // document.body.insertBefore(li4, box)
+
+            // box.insertAdjacentElement('beforebegin', li4)
+            // li3.insertAdjacentElement('afterend', li4)
+
+            //cách hoạt động của pt này là xác đingh đúng vị trí của phần tử đó
+
+            //cách 2
+            li3.insertAdjacentHTML('afterend', '<p>Thẻ para 4</p>')
+            //HTML có thể truyền text được
+
+            li5.insertAdjacentHTML('afterend', '<li>Thẻ para 5</li>')
+
+            
+
+            
+        </script>
+</body>
+
+</html>

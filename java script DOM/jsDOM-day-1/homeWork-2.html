@@ -5,9 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .none {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
+    <button class="btn">hide</button>
     <ul id="list">
         <li>Item 1</li>
         <li>Item 2</li>
@@ -17,6 +23,10 @@
         <li>Item 6</li>
         <li>Item 7</li>
     </ul>
+    
+    <button class="btn1">add</button>
+    <input type="text" placeholder="nhập text" class="text">
+    <button class="btn2">remove</button>
 
     <script>
 
@@ -31,17 +41,10 @@
         let li10 = document.createElement('li')
         li10.innerText = "Item 10"
 
-        let li11 = document.createElement('li')
-        li11.innerText = "Item 10"
-
-        let li12 = document.createElement('li')
-        li12.innerText = "Item 10"
-
         ul.appendChild(li8)
         ul.appendChild(li9)
         ul.appendChild(li10)
-        ul.appendChild(li11)
-        ul.appendChild(li12)
+
         //2. Sửa nội dung cho thẻ <li> 1 thành màu đỏ (color)
         let li1 = document.querySelector(' li:nth-child(1)')
         li1.style.color = 'red'
@@ -51,28 +54,53 @@
         li3.style.backgroundColor = 'blue'
 
         //4. Remove thẻ <li> 4
-            let li4 = document.querySelector('li:nth-child(4)')
-            // ul.removeChild(li4)
+        let li4 = document.querySelector('li:nth-child(4)')
+        // ul.removeChild(li4)
 
         //5. Thêm thẻ <li> mới thay thế cho thẻ <li> 4 bị xóa ở bước trước, thẻ <li> mới có nội dung bất kỳ
-            let newLi = document.createElement('li')
-            newLi.innerText = 'New item li 4'
-            ul.replaceChild(newLi, li4)
+        let newLi = document.createElement('li')
+        newLi.innerText = 'New item li 4'
+        ul.replaceChild(newLi, li4)
 
         //6. Thêm 1 nút "add"
         let button = document.createElement('button')
         button.innerText = 'add'
         button.style.color = 'green'
-        ul.replaceChild(button, li11)
-        
+        document.body.insertAdjacentElement( 'afterend',button)
+
         // +  1 ô input để nhập text ở đằng sau ul
-        let input =  document.createElement('input')
+        let input = document.createElement('input')
         input.placeholder = 'nhập tên'
         input.type = 'text'
         input.autocomplete = 'off'
         input.style.marginLeft = '10px'
-        ul.replaceChild(input, li12)
+        document.body.insertAdjacentElement('afterend',input)
 
+        //bài tập buổi 2
+
+        // 6. Thêm 1 nút "add" + 1 ô input để nhập text. Mỗi khi bấm nút vào nút "add" thêm 1 thẻ <li> có nội dung là nội dung trong ô input vào cuối danh sách ul
+        let btn1  = document.querySelector('.btn1')
+        let input2 = document.querySelector('input')
+        let li = document.querySelectorAll('li')
+        li.innerHTML = 'text'
+        btn1.addEventListener('click', function() {
+            ul.insertAdjacentHTML('beforeend', `<li>${input2.value}</li>`)
+        })
+        // 7. Thêm 1 nút "remove". Chức năng để xóa thẻ <li> cuối cùng của danh sách ul 
+            let btn2 = document.querySelector('.btn2') 
+            btn2.addEventListener('click', function() {
+                let li5 = ul.lastChild
+                ul.removeChild(li5)
+            })
+            
+        // 8. Thêm 1 nút "Hide" trên đầu của danh sách <ul>. 
+        // Khi bấm vào "Hide" thì <ul> sẽ ẩn. Đồng thời label của nút "Hide" => "Show"
+        // Và ngược lại Khi bấm vào "Show" thì <ul> sẽ hiện. Đồng thời label của nút "Show" => "Hide"
+        let btn = document.querySelector('.btn')
+        
+        btn.addEventListener('click', function() {
+            ul.classList.toggle('none')
+        })  
 
 
     </script>

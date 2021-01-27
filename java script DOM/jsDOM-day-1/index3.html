@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="sayHello()">Click me</button>
+
+    <button id="btn">Click me</button>
+    <!-- 2 cách ngày đềuhay được sử dụng -->
+    <button id="btn-01">Click1</button>
+    <script>
+        function sayHello() {
+            console.log("hello")
+        }
+        //HTML
+
+        //cách 1 viết luôn function vào
+        // let btn = document.getElementById('btn')
+        // btn.onclick = function() {
+        //     console.log('hello1')
+        // }
+
+        //cách 2 tách riêng ra 1 function 
+        // btn.onclick = sayHello_01
+
+        // function sayHello_01() {
+        //     console.log('hello1')
+        // }
+
+        // cách 3
+        //bước 1
+        let button = document.getElementById('btn-01')
+        //bước 2 lắng nghe sự kiện
+        // button.addEventListener('click', function() {
+        //     console.log("hello2")
+        // })
+
+        // bài 1 nhấn nút 3 truyền vào và chuyển nút 2 thành màu đỏ
+        button.addEventListener('click', function () {
+            btn.style.backgroundColor = 'red'
+        })
+
+        // bài 2 nhấn nút button 2 tạo ra 1 thẻ p bất kì ở sau nút 3
+
+        btn.addEventListener('click', function () {
+            let p = document.createElement('p')
+            p.innerText = "nhìn gì mà nhìn đấ giờ"
+            document.body.appendChild(p)
+        })
+
+        document.addEventListener('mousemove', function(event) {
+            console.log('mousemove')
+            console.log(event)
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .none {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,6 +18,25 @@
         <li>Item 2</li>
         <li>Item 3</li>
     </ul>
+
+    <button class="btn">none</button>
+    <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos quidem voluptas autem doloribus dignissimos
+        explicabo cum iure eius odio soluta et rerum sed veritatis aliquam eum tempore placeat, omnis neque!</p>
+
+
+    <div>
+        <label for="texture-selector">Choose a texture:</label>
+        <select id="texture-selector">
+            <option value="https://image.freepik.com/free-vector/memphis-seamless-patterns_9202-768.jpg">Memphis
+                Seamless</value>
+            <option value="https://image.freepik.com/free-vector/retro-styled-pattern-background_1048-6593.jpg">
+                Retro-styled</value>
+            <option value="https://image.freepik.com/free-vector/abstract-background-with-3d-pattern_1319-68.jpg">3D
+                Cubes</value>
+        </select>
+    </div>
+
+    <div id="texture-background" style="width: 400px; height: 400px"></div>
 
     <script>
         //Bài 1. Tạo 1 thẻ p có id="text", có nội dung bất kỳ. Yêu cầu
@@ -29,14 +53,28 @@
 
         // Bài 2. Sử dụng vòng lặp để đặt màu chữ cho tất cả thẻ li thành màu blue.
         let li = document.getElementsByTagName('li')
-        
-            for (i = 0; i < li.length; i++) {
-                li[i].style.color = 'blue'
-            }
-        
-        console.log(li)
-        
 
+        for (i = 0; i < li.length; i++) {
+            li[i].style.color = 'blue'
+        }
+
+        console.log(li)
+
+        //bai tap 2
+
+        //3. Tạo 1 thẻ p có nội dung bất kỳ và 1 thẻ button sau đó ấn vào button thì toggle ẩn/hiện thẻ p
+        let btn = document.querySelector('button')
+        let para = document.querySelector('.para')
+        btn.addEventListener('click', function() {
+            para.classList.toggle('none')
+        }) 
+
+        // 4. Lắng nghe sự kiện "change" của ô input.Thay đổi background - image của div = giá trị trong ô input
+        let div = document.querySelector('#texture-background')
+        let select = document.querySelector('#texture-selector')
+        select.addEventListener('change', function () {
+            div.style.backgroundImage = 'url('+ select.value + ')'
+        })
 
 
 

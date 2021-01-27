@@ -50,25 +50,31 @@
         //     para.classList.toggle('text-big')
         // }
 
-        // let time = 13;
-        // setInterval(function(){
-        //     time--
-        //    let interval = para.innerText = time;
-        //     // if (time < 10) {
-        //     //     para.style.color = 'red'
-        //     // }
-        //     if (time == 0) {
-        //         clearInterval(interval);
-        //     }
-        // },1000 )
+         let time = 3;
+         this.invenal = setInterval(() =>{
+             time--
+            let inter = para.innerText = time;
+              if (time < 10) {
+                  para.style.color = 'red'
+              }
+             if (time < 1) {
+                 clearInterval(this.invenal);
+             }
+         },1000 )
 
         // hàm delay sau một khoảng thời gian nào đó sẽ thực hiện lại
-        setTimeout (toggleClass,2000)
-    function toggleClass(){
-        para.classList.toggle('text-big')
-    }
+    //     setTimeout (toggleClass,2000)
+    // function toggleClass(){
+    //     para.classList.toggle('text-big')
+    // }
     
-
+    var a = 1;
+    this.interval = setInterval(() => {
+      console.log(a++)
+      if(a > 10){
+        clearInterval(this.interval);
+      }
+    }, 1000);
     </script>
     
 </body>

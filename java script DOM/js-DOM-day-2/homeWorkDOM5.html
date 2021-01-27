@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập DOM 5 (buổi 2)</title>
+    <link rel="stylesheet" href="homeWork12.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="box">
+            <h1 class="title">thử tài tính toán nào bạn ơi!</h1>
+        </div>
+        <div class="update text2">
+            <div class="display">
+                <h4>số đáp án đúng :</h4>
+                <p class="record">0</p>
+            </div>
+            <div class="display">
+                <h4>Thời gian:</h4>
+                <p class="time">1:00</p>
+            </div>
+
+        </div>
+        <div id="content">
+            <h2 class="border text number1"></h2>
+            <h3 class="design">+</h3>
+            <h2 class="border text number2"></h2>
+            <h3 class="design">=</h3>
+            <input type="text" class="border size input">
+            <button class="checkTotal btn">Kiểm tra</button>
+        </div>
+    </div>
+
+    <script>
+
+        // 2. Khi mỗi lần reload hay vào trang random sẵn 2 số cộng với nhau, chỉ có ô input là để nhập kết quả phép tính
+        let number1 = document.querySelector('.number1')
+        let number2 = document.querySelector('.number2')
+
+        number1.innerText = Math.floor(Math.random() * 1000)
+        number2.innerText = Math.floor(Math.random() * 1000)
+
+        // 3. Sau khi nhập kết quả, bấm nút "kiểm tra" thì kiểm tra xem kết quả xem có chính xác không rồi dùng hàm alert thông báo ra màn hình
+        let btn = document.querySelector('.btn')
+        let input = document.querySelector('.input')
+        let record = document.querySelector('.record')
+
+        btn.addEventListener('click', function () {
+            if (input.value == '') {
+                alert("Vui lòng nhập kết quả của bạn")
+            }
+
+            else if (parseInt(number1.innerText) + parseInt(number2.innerText) == parseInt(input.value)) {
+                //số đáp án đúng mỗi câu trả lời đúng thì số đáp án đúng tăng lên 1
+                record.innerText++
+                alert("Kết quả đúng")
+            }
+            else {
+                alert("Kết quả sai")
+            }
+        })
+
+        // 4. Sau khi thông báo, bấm ok trong hộp thoại alert thì random phép tính khác
+
+        btn.addEventListener('click', function () {
+
+            number1.innerText = Math.floor(Math.random() * 1000)
+            number2.innerText = Math.floor(Math.random() * 1000)
+            input.value = ''
+            input.focus()
+
+
+
+        })
+
+    // Nâng cao hơn: thì ngoài phép cộng thì có thể random thêm - , *, /, %, lũy thừa, để phép tính thêm đa dạng
+
+    
+
+
+    //Thời gian trôi ngược về 0
+    let time = document.querySelector('.time') 
+    let timing = 60
+    this.invenal = setInterval(() => {
+        timing--
+        let inter = time.innerText = timing
+        if (timing < 10) {
+            time.style.color = 'red'
+        }
+        if (timing == -1) { 
+            clearInterval(this.invenal)
+            alert(`Chúc mừng bạn đã hoàn thành thử thách, bạn đã trả lời đúng ${record.innerText} câu hỏi`)
+        }
+    }, 1000)
+
+    // tạo ra một alert hiển thị modal để thông báo kết quả cho người chơi
+
+
+
+    </script>
+
+</body>
+
+</html>
