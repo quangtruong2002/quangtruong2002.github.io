@@ -85,12 +85,15 @@
         li.innerHTML = 'text'
         btn1.addEventListener('click', function() {
             ul.insertAdjacentHTML('beforeend', `<li>${input2.value}</li>`)
+             input2.value = ''
+                input2.focus()
         })
         // 7. Thêm 1 nút "remove". Chức năng để xóa thẻ <li> cuối cùng của danh sách ul 
             let btn2 = document.querySelector('.btn2') 
             btn2.addEventListener('click', function() {
                 let li5 = ul.lastChild
                 ul.removeChild(li5)
+               
             })
             
         // 8. Thêm 1 nút "Hide" trên đầu của danh sách <ul>. 
