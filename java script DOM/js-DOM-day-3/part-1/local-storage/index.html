@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //sử dụng để gán một biến vào localStorage
+
+        localStorage.setItem('name', 'nguyễn văn A');
+        localStorage.setItem('age', '24');
+        localStorage.setItem('status', 'true');
+        localStorage.setItem('number', '[1,2,3,4]');
+
+
+        let user = {
+            name: 'abc',
+            age: 24,
+        }
+        localStorage.setItem('user', JSON.stringify(user))
+
+        
+        //getItem
+        //sử dụng để lấy dữ liệu ra từ localStorage
+
+        //sử dụng để lấy một dữ liệu duy nhất 
+        let name = localStorage.getItem('name')
+        console.log(name)
+
+        //sử dụng để lấy một mảng dữ liệu
+        let user1 = JSON.parse(localStorage.getItem('user'))
+        console.log(user1)
+
+        //remove xóa dữ liệu
+        //sử dụng để xóa một hoặc nhiều dữ liệu trong localStorage 
+        localStorage.removeItem('age')
+
+        //xóa hết clear
+        //sử dụng để xóa hết dl trong localStorage
+        localStorage.clear()
+
+
+
+
+    </script>
+</body>
+
+</html>

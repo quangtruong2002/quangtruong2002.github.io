@@ -9,6 +9,9 @@
         .none {
             display: none;
         }
+        .block {
+            display: block;
+        }
     </style>
 </head>
 
@@ -100,9 +103,20 @@
         // Khi bấm vào "Hide" thì <ul> sẽ ẩn. Đồng thời label của nút "Hide" => "Show"
         // Và ngược lại Khi bấm vào "Show" thì <ul> sẽ hiện. Đồng thời label của nút "Show" => "Hide"
         let btn = document.querySelector('.btn')
+        let block = document.querySelector('.block')
+        let none = document.querySelector('.none')
+        
         
         btn.addEventListener('click', function() {
-            ul.classList.toggle('none')
+            
+            if (ul != 'none') {
+                btn.innerText = 'show'
+                ul.classList.toggle('none')
+            }
+            else {
+                btn.innerText = 'hide'
+            }
+
         })  
 
 
