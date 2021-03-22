@@ -69,6 +69,12 @@ btn_add.addEventListener('click', function() {
     renderUI(todos)
 })
 
+//chức năng lưu dữ liệu vào localStorage
+function setDataToLocalStorage(arr) {
+    localStorage.setItem('todos', JSON.stringify(arr))
+    renderUI(arr)
+}
+
 // sử dụng nút enter cho buttom
 todo_input.addEventListener('keyup', function (e) {
     
@@ -131,7 +137,7 @@ function deleteTodo(id) {
             todos.splice(i,1);
         }
     }
-    renderUI(todos)
+    setDataToLocalStorage(todos)
 }
 
 function toggleStatus(id) {
