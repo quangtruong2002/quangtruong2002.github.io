@@ -62,12 +62,13 @@
 
         let colors = [...data]; // clone giá trị để không ảnh hưởng đến giá trị ban đầu
 
-        function renderBox(arr) { //function render bõx function hiển thị box
+        function renderBox(arr) { //function render box function hiển thị box
             boxes.innerHTML = '';
             if (arr.length == 0) {
                 boxes.innerText = ' không có box nào trong danh sách';
                 return
             }
+            // vòng lặp để hiển thị box
             for (let i = 0; i < arr.length; i++) {
                 const b = arr[i];
                 boxes.innerHTML += `
@@ -78,9 +79,11 @@
                 `;
             }
         }
+
         function updateTotalBox() {
             totalBox.innerText = colors.length
         }
+        
         function update() {
             renderBox(colors);
             updateTotalBox();

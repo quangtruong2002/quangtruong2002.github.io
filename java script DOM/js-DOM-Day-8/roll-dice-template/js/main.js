@@ -91,8 +91,8 @@ function changerPlayer() {
 holdPoint.addEventListener('click', function () {
      document.querySelector(`#score-${activePlayer}`).textContent = scores + Number(document.querySelector(`#score-${activePlayer}`).textContent)
 
-    let value = Number(input.value)
-    if (value == '') {
+    let values = Number(input.value)
+    if (values == '') {
     checkWinner(20)
     }
     else {
@@ -130,6 +130,7 @@ function displayWinner() {
     holdPoint.style.display = 'none'
 
 }
+
 //reload lại game
 newGame.addEventListener('click', function () {
 

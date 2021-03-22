@@ -24,12 +24,10 @@ let todos = [
     // },
 ];
 
-const todo_List = document.querySelector('.todo-list')
+let todo_List = document.querySelector('.todo-list')
 
-const btn_add = document.getElementById('btn-add')
-const todo_input = document.getElementById('todo-input');
-
-const options = document.querySelectorAll('.todo-option-item input')
+let  btn_add = document.getElementById('btn-add')
+let  todo_input = document.getElementById('todo-input');
 
 
 let isUpdate = false;
@@ -58,13 +56,14 @@ btn_add.addEventListener('click', function() {
     }
     else {
         //thêm công việc 
-    }
-    let newTodo = {
+        let newTodo = {
         id : randomId(),
         title : todoTitle,
         status : false
     }
     todos.push(newTodo)
+    }
+    
 
     todo_input.value = '';
     renderUI(todos)
@@ -92,15 +91,15 @@ function renderUI(arr) {
 
         todo_List.innerHTML += `    
         <div class="todo-item ${t.status ? 'active-todo' : ''}">
-        <div class="todo-item-title">
-            <input type="checkbox" ${t.status ? 'checked' : ''} onclick=toggleStatus(${t.id})>
+        <div class="todo-item-title ">
+            <input type="checkbox" ${t.status ? 'checked' : ''} onclick="toggleStatus(${t.id})">
             <p>${t.title}</p>
         </div>
         <div class="option">
-            <button class="btn btn-update" onclick=updateTodo(${t.id})>
+            <button class="btn btn-update" onclick="updateTodo(${t.id})">
                 <img src="./img/pencil.svg" alt="icon">
             </button>
-            <button class="btn btn-delete" onclick=deleteTodo(${t.id})>
+            <button class="btn btn-delete" onclick="deleteTodo(${t.id})">
                 <img src="./img/remove.svg" alt="icon">
             </button>
         </div>
@@ -132,7 +131,7 @@ function deleteTodo(id) {
             todos.splice(i,1);
         }
     }
-    
+    renderUI(todos)
 }
 
 function toggleStatus(id) {
@@ -145,10 +144,32 @@ function toggleStatus(id) {
     renderUI(todos)
 }
 
+//phần này em bó tay rồi
 
+// document.querySelector('#all')
+// .addEventListener('change',  function() {
+//     console.log('game start')
+// })
 
+// document.querySelector('#unactive')
+// .addEventListener('change', function() {
+//     for(let i = 0; i < todos.length; i++) {
+//         if(todos[i].status == false) {
+//             return Number(todos[i].value)
+//         }
+//     }
+//     renderUI(todos)
+// })
 
-
+// document.querySelector('#active')
+// .addEventListener('change', function() {
+//     for(let i = 0; i < todos.length; i++) {
+//         if(todos[i].status == true) {
+//             return Number(todos[i].value)
+//         }
+//     }
+//     renderUI(todos)
+// })
 
 window.onload = renderUI(todos)
 
