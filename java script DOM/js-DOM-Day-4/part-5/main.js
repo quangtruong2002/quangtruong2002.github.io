@@ -10,14 +10,14 @@ let highScoreEle = document.querySelector('.high-score');
 
 let listPlayerEle = document.querySelector('.list-player');
 
-// Truy cập các màn chơi
-let startGameEle = document.querySelector('#start-game');
-let gameEle = document.querySelector('#game');
-let endGameEle = document.querySelector('#end-game');
+//truy cập các màn chơi
+let startGameEle = document.querySelector('#start-game')
+let gameEle = document.querySelector('#game')
+let endGameEle = document.querySelector('#end-game')
 
-let username = document.querySelector('#user-name');
-let userAvatar = document.querySelector('#user-avatar');
-let btnStartGame = document.querySelector('#btn-start-game');
+let userName = document.querySelector('#user-name')
+let userAvatar = document.querySelector('#user-avatar')
+let btnStartgame = document.querySelector('#btn-start-game')
 
 // Định nghĩa biến
 let firstNumber;
@@ -37,36 +37,38 @@ let ranking = [];
 let name;
 let avatar;
 
-// Lắng nghe sự kiện khi bắt đầu game
-btnStartGame.addEventListener('click', function () {
-    name = username.value;
+//Lắng nghe sự kiện khi bắt đầu game
+btnStartgame.addEventListener('click', function () {
+    name = userName.value;
     avatar = userAvatar.value;
     if (name == '' || avatar == '') {
-        alert('Không được để trống');
-        return;
+        alert('không được để trống')
+        return
     }
     startGameEle.style.display = 'none';
-    gameEle.style.display = 'flex';
+    gameEle.style.display = 'flex'     //vì khi CSS dùng display = flex, nên trong js cũng dùng flex để k bị sai định dạng, nhảy dòng
+    guessEle.focus();
+    init()
+})
 
-    init();
-});
-
-// Lấy data từ localStorage để render
-function getDataFromLocalStorage() {
-    let dataLocalStorage = localStorage.getItem('ranking');
-    if (dataLocalStorage) {
-        ranking = JSON.parse(dataLocalStorage);
-    } else {
-        ranking = [];
+//lấy data từ localstorage để render
+function getDataFromLocalStorage() {                         //gọi hàm này khi bắt đầu game
+    let getDataLocalStorage = localStorage.getItem("ranking")    //xảy ra 2 TH, dữ liệu có sẵn hoặc chưa có gì
+    if (getDataLocalStorage) {
+        ranking = JSON.parse(getDataLocalStorage)
     }
-    renderRanking(ranking);
+    else {
+        ranking = []
+    }
+    renderRanking(ranking)
 }
 
-// set data
+//set data
 function setDataToLocalStorage(arr) {
-    localStorage.setItem('ranking', JSON.stringify(arr));
-    renderRanking(arr);
+    localStorage.setItem("ranking", JSON.stringify(arr))
+    renderRanking(arr)
 }
+
 
 // Random số và hiển thị
 function randomNumber() {
@@ -84,7 +86,7 @@ function randomNumber() {
 // Khởi tạo game
 function init() {
     score = 0;
-    time = 10;
+    time = 8;
 
     timeEle.innerText = `${time}s`;
     scoreEle.innerText = score;
@@ -92,8 +94,8 @@ function init() {
 
     guess.innerText = '';
     randomNumber();
+    //renderRanking(ranking);//xóa đi, thay bằng local storage
     getDataFromLocalStorage();
-
     interval = setInterval(countDown, 1000);
 }
 
@@ -111,9 +113,32 @@ function countDown() {
         // Thêm thông tin người chơi vào ranking
         addPlayerToRanking();
         // Sau 3s thì chơi lại game
-        setTimeout(init, 3000);
+        //setTimeout(init, 3000);
+        gameOver()
     }
 }
+function gameOver() {
+    gameEle.style.display = 'none'
+    endGameEle.style.display = 'flex'
+    document.querySelector('.message').innerText = `Điểm của bạn là: ${score}`
+}
+//xử lý thoát game
+document.querySelector('.btn-exit-game').addEventListener('click', function () {
+    window.location.reload();           //tương đương nút reload- F5
+})
+//xử lý chơi lại game
+document
+    .querySelector('.btn-play-again')
+    .addEventListener('click', function () {
+        gameEle.style.display = 'flex'
+        endGameEle.style.display = 'none'
+
+        guessEle.value = '';
+        guessEle.focus();
+
+        
+        init()
+    })
 
 // Cập nhật điểm người chơi
 function updateScore() {
@@ -147,12 +172,13 @@ guessEle.addEventListener('keydown', function (e) {
 
 function addPlayerToRanking() {
     let user = {
-        name: 'Nguyễn Văn A',
-        avatar: 'https://techmaster.vn/media/static/crop/brp4jgc51co0c1746n90',
+        name: name,
+        avatar: avatar,
         score: score,
     };
     ranking.push(user);
-    setDataToLocalStorage(ranking);
+    //renderRanking(ranking); bỏ đi để làm phần localstorage
+    setDataToLocalStorage(ranking)
 }
 
 // Hiển thị danh sách ranking ra ngoài giao diện
