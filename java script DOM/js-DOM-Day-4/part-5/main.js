@@ -86,7 +86,7 @@ function randomNumber() {
 // Khởi tạo game
 function init() {
     score = 0;
-    time = 8;
+    time = 30;
 
     timeEle.innerText = `${time}s`;
     scoreEle.innerText = score;
