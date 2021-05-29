@@ -189,6 +189,30 @@
     // tách từng từ ra
     //từ đó sắp xếp thay đổi viết hoa thành viết thường
 
+let n  = 96 ;
+
+for (i = 2; i < n/2; i++) {
+                    if (n % i == 0) {
+                        console.log("là số nguyên tố ")
+                        break
+                    }
+                    else {
+                        console.log("không phải số nguyên tố")
+                        break
+                    }
+                }
+
+let flast = true 
+let m = 97
+for (i = 2; i < m/2; i++) {
+                    if (m % i == 0) {
+                        flast = false;
+                        break
+                    }
+                }
+console.log( flast ?'n là số nguyên tố ' : 'n không phải là số nguyên tố')
+        
+
     </script>
 </body>
 
