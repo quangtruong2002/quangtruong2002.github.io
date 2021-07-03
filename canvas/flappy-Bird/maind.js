@@ -126,28 +126,28 @@ class Bird {
         ctx.drawImage(sprites, this.animate[this.i].sX, this.animate[this.i].sY, this.sW, this.sH, this.cX, this.cY, this.cW, this.cH)
     }
     update() {
-        if(game == 'play' || game == 'end') {
+        if (game == 'play' || game == 'end') {
             this.v += this.a;
             this.cY += this.v;
             // Kiểm tra va trạm nền đất 
-            if(this.cY +this.cH + this.v >= 625) {
+            if (this.cY + this.cH + this.v >= 625) {
                 game = 'end';
                 this.v = 0;
                 this.cY = 590;
             }
             // Kiểm tra va chạm với đường ống 
-            if(
+            if (
                 bird.cX + bird.cW > arrPipes[0].cX &&
                 bird.cX < arrPipes[0].cX + arrPipes[0].cW &&
                 (
-                    bird.cY < arrPipes[0].cY + arrPipes[0].cH || 
+                    bird.cY < arrPipes[0].cY + arrPipes[0].cH ||
                     bird.cY + bird.cH > arrPipes[0].cY + arrPipes[0].cH + arrPipes[0].space
-                ) 
-            ){
+                )
+            ) {
                 game = 'end';
             }
             // trường hợp ăn điểm 
-            if(bird.cX === arrPipes[0].cX + 82 || bird.cX === arrPipes[0].cX + 81 ){
+            if (bird.cX === arrPipes[0].cX + 82 || bird.cX === arrPipes[0].cX + 81) {
                 ++score.value
                 console.log('ăn điểm')
                 maxScore.value = Math.max(score.value, maxScore.value);
@@ -160,14 +160,22 @@ let bird = new Bird(150, canvas.height / 2 - 12);
 
 
 // Handle event click
-canvas.addEventListener('click', function (event) {
+canvas.addEventListener("keydown", function (event) {
     switch (game) {
         case 'start':
+            if (event.keyCod == 32) {
+
+                console.log("start game")
+            }
             game = 'play';
             break
         case 'play':
-            console.log('Chơi game');
+            if (event.keyCod == 32) {
             bird.v = -9.5;
+            }
+            console.log('Chơi game');
+
+            //  bird.v = -9.5;
             break
         case 'end':
             console.log('End game');
@@ -186,6 +194,7 @@ canvas.addEventListener('click', function (event) {
             }
             break
     }
+
 })
 
 // Pipes 
@@ -210,6 +219,16 @@ class Pipes {
         ctx.drawImage(sprites, this.sXt, this.sYt, this.sW, this.sH, this.cX, this.cY, this.cW, this.cH);
         // Vẽ đường ống dưới
         ctx.drawImage(sprites, this.sXb, this.sYb, this.sW, this.sH, this.cX, this.cY + this.cH + this.space, this.cW, this.cH);
+    }
+}
+
+class Medal {
+    contructor(i) {
+        this.sX = 80;
+        this.sY = [0,58.114];
+        this.sW = 53;
+        this.sH = 54;
+        this.cX = canvas
     }
 }
 
