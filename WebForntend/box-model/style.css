@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    word-spacing: -1ch;
+}
+.section{
+    background-color: violet;
+    height: 250px;
+    display: inline-block;
+    vertical-align: middle;
+    word-spacing: normal;
+    background-image: url(https://banx9x.github.io/projects/box-model/img/1.png);
+    background-position: center top;
+    background-size: cover;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 90px;
+    font-weight: bold;
+    line-height: 2.78;
+    color: rgba( 255, 255, 255, 0.60);
+}
+.section__leder{
+    width: calc((100% - 10px) /2);
+    
+    box-shadow: -2px -2px 1px #f2f2f2;
+}
+.section__normal{
+    width: calc((100% - 30px)/4);
+    box-shadow: -2px -2px 1px #f2f2f2;
+}
+.section__small{
+    display: block;
+    height: 120px;
+    width: 100%;
+    box-shadow: -2px -2px 1px #f2f2f2;
+    line-height: 1.3;
+}
+.mr10{
+    margin-right: 10px;
+}
+.mt10{
+    margin-top: 10px;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+.bgn{
+    background-image: none;
+    background-color: white !important;
+}
+.bsn{
+    box-shadow: none;
+}
+ .lh{
+     line-height: 2;
+ }   
