@@ -1,0 +1,365 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: sans-serif;
+    line-height: 27px;
+    font-weight: 300;
+    font-size: 15px;
+    color: #6c6c6f;
+}
+
+.container{
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.collumn-one{
+    width: 8.33333%;
+}
+.collumn-two{
+    width: 16.66667%;
+}
+.collumn-three{
+    width: 25%;
+}
+.collumn-four{
+    width: 33,33333%;
+}
+.collumn-five{
+    width: 41.66667%;
+}
+.collumn-six{
+    width: 50%;
+}
+.collumn-seven{
+    width: 58.33333%;
+}
+.collumn-eight{
+    width: 66.66667%;
+}
+.collumn-nine{
+    width: 75%;
+}
+.collumn-ten{  
+    width: 83.33333%;
+}
+.collumn-eleven{
+    width: 91.66667%;
+}
+.collumn-twelve{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.offset-one{
+    margin-left: 8.33333%;
+}
+.offset-one-right{
+    margin-right: 8.33333%;
+}
+.offset-two{
+    margin-left: 16.66667%;
+}
+.offset-three{
+    width: 25%;
+}
+.menu-item{
+    display: inline;
+}
+.menu-link{
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 20px;
+    color: #263a41;
+}
+
+.menu{
+    margin-bottom: 10px;
+}
+.banner{
+    /* background-image: url(https://demo.themeies.com/leospa/images/leaf.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position: center/12%; */
+    background: url(https://demo.themeies.com/leospa/images/leaf.png) no-repeat left center/12%;
+    padding: 6% 0 12% 0;
+}
+.spa-img{
+    width: 42%;  
+    position: absolute;
+    right: 0;
+    top: 0;  
+}
+.span{
+    color:#ff817e;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    font-family: "Rufina",serif;
+    margin-bottom: 25px;
+}
+.h1{
+    font-size: 60px;
+    display: block;
+    font-weight: 600px;
+    margin-bottom: 25px;
+    font-family: ui-sans-serif;
+    line-height: 75px;
+    color: black;
+}
+.p{
+    display: block;
+    margin-bottom: 50px;
+}
+.a-button{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #ff817e;
+    padding:15px 28px;
+    line-height: normal;
+    text-transform: uppercase;
+
+}
+.about{
+    display: block;
+    position: relative;
+    padding: 50px 0;
+}
+ 
+.a-text{
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    margin-left: 10px;
+}
+.a-btn{
+    display: inline-block;
+    font-size: 10px;
+    padding: 7px 16px 7px 17px;
+    border-radius: 50%;
+    background-color: #fcf5ee;
+    color: #ff817e;
+}
+.flower-1{
+    position: absolute;
+    left: 16%;
+}
+.flower-2{
+    position: absolute;
+    right: 10%;
+    top: 50%;
+}
+.about-content{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.butterfly{
+    margin-bottom: 20px;
+}
+.span2{
+    display: inline;
+    font-family: 'Rufina', serif;
+    
+}
+.h2{
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Rufina', serif;
+    color: black;
+    margin-bottom: 42px;
+}
+.span2{
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: sans-serif;
+    margin-bottom: 30px;
+
+}
+.a-button-2{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #ff817e;
+    padding:15px 33px;
+    line-height: normal;
+    text-transform: uppercase;
+    border-radius: 30px
+    
+}
+.margin-right-10{
+    margin-right: 5px;
+    
+}
+/* >>>>>>>>>>>>>>>>>>>>> */
+.poster{
+    display: block;
+    position: relative;
+    padding: 50px 0;
+
+}
+.poster-img{
+ width: 100%;
+ height: 100%;
+ object-fit: cover;   
+}
+.style-img{
+    width: 352px;
+}
+.service-hover{
+    background-color: rgba(225, 129, 126, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition:all 300ms ease-in-out ;
+    visibility: hidden;
+}
+.service-hover:hover{
+    visibility: visible;
+}
+.single-service{
+    position: relative;
+}
+/* >>>>>>>>>>>>>>>>>> */
+.procedures{
+    padding: 50px 0;
+}
+.procedurect-item{
+    text-align: center;
+}
+.margin-auto{
+    margin: auto;
+}
+.poster2_inside{
+    padding: 20px;
+    border: 1px solid #e3e6ea;
+    text-align: center;
+}
+/* .max-width{
+    max-width: 400px;
+} */
+.margin-left-right-15{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.h4{
+    font-family: ui-sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #263a41;
+    margin-bottom: 39px;
+}
+.margin-bottom{
+    margin-bottom: 35px;
+}
+.a_button_3{
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    display: block;
+    background-color: #30383b;
+    width: 170px;
+    margin-left: 64px;
+    padding: 13px 10px;
+    color: #fff;
+    border-radius: 30px;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 30px;
+}
+.a_button_3:hover{
+    background-color: #ff817e;
+}
+.procedurect-item{
+margin-bottom: 20px;
+}
+.text-align-center{
+    text-align: center;
+}
+.testimonal{
+    background-color: #fdf2f0;
+    padding: 50px;
+}
+.font-text{
+    display: inline-block;
+    font-size: 14px;
+    font-family:sans-serif;
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.avatar{
+    border-radius:50%;
+}
+.margin-0{
+    margin: 0;
+}
+.experienced-team{
+    padding: 50px 0;
+    text-align: center;
+}
+.information{
+    position: absolute;
+    text-align: center;
+    bottom: -10%;
+    background-color: #fff;
+    box-shadow: 0 5px 20px #f0f0f0;
+    padding: 30px;
+    height: auto;
+}
+.h5{
+    font-size: 22px;
+    font-weight: 700;
+    font-family: ui-sans-serif;
+    color: black;
+}
+.style-icon{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 30px;
+    border: 1px solid black;
+    border-radius: 100%;
+    width: 33px;
+    text-align: center;
+    margin: 30px 3px 0px 3px;
+    transition: all 0.2s ease-in-out;
+}
+.visibility{
+    visibility: hidden;
+    margin-top: -30px;
+    transition: all 0.3s ease-in-out;
+}
+.visibility:hover{
+    visibility: visible; 
+    margin-top: 30px;
+}
+.style-icon:hover{
+    background-color: #ff817e;
+    color: #fff !important;
+    border-color: #ff817e;
+}
+
