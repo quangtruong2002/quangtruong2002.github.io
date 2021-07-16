@@ -81,11 +81,14 @@ li{
 }
 .menu-link{
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0 20px;
     color: #263a41;
+    transition: all 0.2s ease-in-out;
 }
-
+.menu-link:hover{
+    color: #ff817e;
+}
 .menu{
     margin-bottom: 10px;
 }
@@ -133,7 +136,10 @@ li{
     padding:15px 28px;
     line-height: normal;
     text-transform: uppercase;
-
+    transition: all 0.2s ease-in-out;
+}
+.a-button:hover{
+    color: #555;
 }
 .about{
     display: block;
@@ -201,12 +207,21 @@ li{
     padding:15px 33px;
     line-height: normal;
     text-transform: uppercase;
-    border-radius: 30px
-    
+    border-radius: 30px;
+    transition: all 0.2s ease-in-out;
+}
+.a-button-2:hover{
+    color: #555;
 }
 .margin-right-10{
     margin-right: 5px;
     
+}
+.margin-right-5{
+    margin-right: 10px;
+}
+.margin-left-5{
+    margin-left: 10px;
 }
 /* >>>>>>>>>>>>>>>>>>>>> */
 .poster{
@@ -247,6 +262,7 @@ li{
     padding: 50px 0;
 }
 .procedurect-item{
+    /* padding: 50px 0; */
     text-align: center;
 }
 .margin-auto{
@@ -315,17 +331,26 @@ margin-bottom: 20px;
 .avatar{
     border-radius:50%;
 }
-.margin-0{
-    margin: 0;
+
+/* >>>>>>>>>>>>>>>> */
+
+.single-service2{
+    position: relative;
+    width: auto;
+}
+.single-service2:hover{
+    visibility: visible;
+    /* opacity: 1; */
+    margin-top: 0;
 }
 .experienced-team{
     padding: 50px 0;
     text-align: center;
 }
 .information{
-    position: absolute;
+    position: relative;
     text-align: center;
-    bottom: -10%;
+    margin-top: -50px;
     background-color: #fff;
     box-shadow: 0 5px 20px #f0f0f0;
     padding: 30px;
@@ -345,21 +370,143 @@ margin-bottom: 20px;
     border-radius: 100%;
     width: 33px;
     text-align: center;
-    margin: 30px 3px 0px 3px;
+    margin: 0px 3px 0px 3px;
     transition: all 0.2s ease-in-out;
 }
-.visibility{
+.social{
+    /* opacity: 0; */
     visibility: hidden;
-    margin-top: -30px;
-    transition: all 0.3s ease-in-out;
-}
-.visibility:hover{
-    visibility: visible; 
-    margin-top: 30px;
+    margin-top: -15px;
 }
 .style-icon:hover{
     background-color: #ff817e;
     color: #fff !important;
     border-color: #ff817e;
 }
+/* >>>>>>>>>>>>>>>>>>>>>>> */
+/* div ngoài cùng */
+.registration-form{
+    padding: 50px 0;
+}
 
+.registration{
+    background-color: #fdf2f0;
+    padding: 35px 90px ;
+    height: 491px;
+}
+.form-feild{
+    display: flex;
+    justify-content: space-between;
+}
+.type-text{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #d4d3d3;
+    color: #999;
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 10px 0;
+    margin-bottom: 45px;
+    width: 100%;
+}
+.select-field{
+    width: 100%;
+}
+.btn-style{
+    padding: 19px 15px;
+    border: none;
+}
+
+/* >>>>>>>>>>>>>>> */
+
+.submit{
+    text-align: center;
+    padding: 50px 0;
+}
+.address{
+    float: left;
+}
+.collumn{
+    flex-direction: column;
+}
+.style-icon-2{
+    font-size: 13px;
+    line-height: 53px;
+    /* border: 1px solid black; */
+    border-radius: 100%;
+    width: 54px;
+    text-align: center;
+    margin: 0px 3px 0px 3px;
+    background-color: #ff817e;
+    color: #fff;
+    position: absolute;
+    left: 0;
+}
+
+.a-address{
+    color: #888;
+    transition: all 0.3s ease-in-out;
+}
+.a-address:hover{
+    color:#ff817e;
+}
+.address-style-text{
+    line-height: normal;
+    color: #888;
+
+}
+
+address{
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    color: #888;
+    margin-bottom: 1rem;
+    text-align: left;
+    padding-left: 80px;
+}
+.margin-bottom{
+    margin-bottom:70px;
+    color: #888;
+}
+
+.style-input{
+    font-size: 15px;
+    font-weight: 400;
+    border: 1px solid #e3e6ea;
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+#comment{
+    padding-bottom: 44px;
+}
+.submit-btn{
+    border: none;
+    font-weight: 600;
+    font-size: 15px;
+    float: left;
+    padding: 18px 30px;
+}
+.margin-bottom-img{
+    margin-bottom: 25px;
+}
+.footer{
+    background-color: #fdf2f0;
+    padding: 80px 0;
+}
+.style-footer-text{
+    font-size: 12px;
+    color: #888;
+}
+.margin-left-right-10{
+    margin: 0 10px;
+}
+.margin-left{
+    margin-left: 100px;
+}
+.margin-left2{
+    margin-left: 159px;
+}
