@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: rgb(33, 25, 34);
+    font-size: 12px;
+}
+.collumn-one{
+    width: 8.33333%;
+}
+.collumn-two{
+    width: 16.66667%;
+}
+.collumn-three{
+    width: 25%;
+}
+.collumn-four{
+    width: 33,33333%;
+}
+.collumn-five{
+    width: 41.66667%;
+}
+.collumn-six{
+    width: 50%;
+}
+.collumn-seven{
+    width: 58.33333%;
+}
+.collumn-eight{
+    width: 66.66667%;
+}
+.collumn-nine{
+    width: 75%;
+}
+.collumn-ten{  
+    width: 83.33333%;
+}
+.collumn-eleven{
+    width: 91.66667%;
+}
+.collumn-twelve{
+    width: 100%;
+}
+
+.container{
+    
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}

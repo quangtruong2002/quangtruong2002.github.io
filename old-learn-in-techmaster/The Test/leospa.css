@@ -56,7 +56,7 @@ i{
 .left-area{
     width: 300px;
     position: absolute;
-    top: 0;
+    top: 60px;
     left: 0;
     height: auto; 
     transform: translate3d(0,0,0);
@@ -156,7 +156,7 @@ a:hover{
     border-radius: 3px;
 }
 .main-box{
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 40px;
 }
 .a-design{
@@ -310,7 +310,7 @@ h3{
 .newSearch{
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 90px;
 }
 .input3{
     color: #fff;
@@ -322,22 +322,22 @@ h3{
     background-color: #7c9cef;
 }
 .bottom-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     
-width: auto;
-height: auto;
 }
 .shadow3{
-    display: flex;
-    justify-content: center;
-    width: auto;
-    height: auto;
+    text-align: center;
+    padding-left: auto;
+    padding-right: auto;
     box-shadow: 0 0 0 1px #f2f2f2;
+    background-color: #fff;
 }
 .small-text3{
     font-size: 14px;
     color: #B1B7BC;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
 }
