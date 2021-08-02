@@ -20,8 +20,17 @@ body{
 .row-two{
     width: 16.66667%;
 }
+.row-two-mg10{
+    width: calc((100% - 50px)/6);
+}
 .row-three{
     width: 25%;
+}
+.row-three-mg10{
+    width: calc((100% - 30px)/4);
+}
+.half-row-three{
+    width: calc((100% - 10px) /2);
 }
 .row-four{
     width: 33.33333%;
@@ -35,7 +44,7 @@ body{
 .row-seven{
     width: 58.33333%;
 }
-.row-eigh{
+.row-eight{
     width: 66.66667%;
 }
 .row-nine{
@@ -56,6 +65,9 @@ img{
 .column{
     flex-direction: column;
 }
+.flex-wrap{
+    flex-wrap: wrap;
+}
 .nav{
     margin-top: 5px;
     display: contents;
@@ -67,6 +79,7 @@ img{
     right: 0;
     box-shadow: 0 0 1px 0 rgb(0 0 0 / 50%);
     background-color: #fff;
+    z-index: 2;
 }
 .container{
     margin-left: 57px;
@@ -80,6 +93,8 @@ a{
 li{
     list-style: none;
 }
+
+/* menu đa cấp*/
 .menu{
     margin-right:54px ;
 }
@@ -102,24 +117,26 @@ li{
 }
 .menu-sub{
     position: fixed;
-    top: 60px;
+    top: 58px;
     left: 0;
     right: 0;
     padding: 10px 0;
     background: #fff;
     box-shadow: 0 4px 5px #ccc;
     display: none;
+    border-top: 1px solid #eee;
 }
 .gener-item{
     padding: 3px 4px;
     border-radius: 10px;
     border: 1px solid #ccc;
     margin-right: 5px;
+    font-size: 14px;
 }
 img{
     width: 100%;
     height: 100%;
-    
+    transition: all 0.3s ease-in-out;
 }
 .menu-sub-list{
     max-width: 1320px;
@@ -129,7 +146,14 @@ img{
     position: relative;
     float: left;
     width: 155px;
-    height: 87px;
+    height: 87px; 
+    overflow: hidden;  
+}
+.menu .menu-sub-item:hover div{
+    color: red;
+}
+.menu .menu-sub-item:hover img{
+    transform: scale(1.2);
 }
 .text-menu-sub{
     position: absolute;
@@ -137,9 +161,7 @@ img{
     right: 0;
     bottom: 0;
 }
-/* .menu-sub-item .text-menu-sub:hover{
-    color: red;
-} */
+
 .menu-sub-list .menu-sub-item div{
     position: absolute;
     bottom: 0;
@@ -150,6 +172,7 @@ img{
     text-overflow: ellipsis;
     overflow: hidden;
     color: #fff;
+    transition: all 0.3s ease-in-out;
     background: linear-gradient(transparent,rgba(0,0,0,.1),rgba(0,0,0,.3),rgba(0,0,0,.5),rgba(0,0,0,.7),rgba(0,0,0,.9));
 }
 .margin-right-10{
@@ -167,11 +190,17 @@ img{
     width: 320px;
 }
 
+/* search heading */
 .input-search{
     padding: 6px 30px 6px 10px ;
     border-radius: 20px;
     border: 1px solid lightgray;
     width: 100%;
+    outline-style: none;
+    
+}
+.header .search input[type=text] {
+    transition: background .5s, border .5s, color .5s;
 }
 .search-icon{
     position: absolute;
@@ -206,6 +235,9 @@ button{
     background-color: rgb(68, 167, 228);
     color: #fff;
 }
+
+
+/* avatar login */
 .avatar{
     background-color: #fff;
     margin-left: 10px;
@@ -229,6 +261,8 @@ button{
 .padding{
     padding-top: 100px;
 }
+
+/* style login */
 .nav-right{
     position: fixed;
     top: 0;
@@ -238,6 +272,7 @@ button{
     height: auto;
     box-shadow: 0 0 10px #999;
 }
+
 .heading{
     background-image: url("	https://vuighe.net/assets/img/navbar-user-header.jpg");
     padding: 10px 10px 0px 10px;
@@ -402,4 +437,339 @@ hr{
 }
 .margin-top-50{
     margin-top: 30px;
+}
+
+.padding-top-bottom-60{
+    padding: 60px 0;
+}
+.margin-top-20{
+    margin-top: 20px;
+}
+
+/* slide  */
+
+.slide-container{
+    width: 1320px;
+}
+.slide-cover{
+    width: 980px;
+    height: 290px;
+}
+.slide-box{
+    position: relative;
+}
+.border-slide-btn{
+    font-size: 32px;
+    color: #fff;
+    margin-left: 6px;
+}
+.slide-play-button{
+    width: 70px;
+    height: 70px;
+    background: rgba(0,0,0,.6);
+    text-align: center;
+    line-height: 2.3;
+    border-radius: 100%;
+}
+.style-button{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.slide-item{
+    width: 320px;
+    height: 90px;    
+}
+.align-items-{
+    align-items: stretch;
+}
+
+/* Latest episodes */
+h2{
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: 400; 
+}
+.top{
+    font-size: 16px;
+    margin-left: 15px;
+}
+.slide-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 26px 90px;
+    white-space: nowrap;
+    background-image: linear-gradient(transparent,rgba(0,0,0,.1),rgba(0,0,0,.3),rgba(0,0,0,.5));
+    color: #fff;
+    width: 100%;
+}
+.margin-top-40{
+    margin-top: 40px;
+}
+.font-size-20{
+font-size: 20px;
+}
+.episodes-item{
+    position: relative;
+    float: left;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.text-episodes{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 15px 10px;
+    color: #fff;
+    background: linear-gradient(transparent,rgba(0,0,0,.1),rgba(0,0,0,.3),rgba(0,0,0,.5),rgba(0,0,0,.7),rgba(0,0,0,.9));
+}
+.text-episodes-2{
+    bottom: 20px;
+}
+.episode-name{
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}
+.width-60{
+    width: 60%;
+}
+.episode-views{
+    float: right;
+}
+.episode-content{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.style-button-2{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0 0 10px #fff;
+    transition: opacity .3s,visibility .3s;
+}
+.episodes-item:hover img{
+    transform: scale(1.2);
+}
+.episodes-item:hover .style-button-2{
+    opacity: 1;
+    visibility: inherit;
+}
+.box-shadow-anime-news{
+    box-shadow: 2px 2px 3px 0px #f2f2f2;
+}
+.margin-bottom-5{
+    margin-bottom: 5px;
+}
+.anime-news .anime-news-img:hover{
+    opacity: .8;
+}
+.anime-news-img{
+    transition: opacity .3s;
+}
+/* video */
+.video-play-button{
+    width: 50px;
+    height: 50px;
+    line-height: 3.3;
+    text-align: center;
+    border: 2px solid hsla(0,0%,100%,.65);
+    background-color: rgba(0,0,0,.6);
+    border-radius: 100%;
+    transition: box-shadow .3s,border .3s
+}
+.item-slide-btn{
+    margin-left: 2px;
+}
+.style-button-3{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.font-size-16{
+    font-size: 16px;
+}
+.padding-video-title{
+    padding: 30px 10px 10px;
+}
+
+.time-video{
+    position: absolute;
+    top: 29px;
+    left: 66px;
+    color: #fff;
+    padding: 0 5px;
+    border-radius: 2px;
+    border-left: 1px solid #fff;
+    text-shadow: 0 0 10px #000;
+    transition: background .3s, border .3s;
+}
+.video-img{
+    transition: opacity .3s;
+}
+.video:hover .video-img{
+    opacity: .8;
+}
+.video:hover .video-play-button{
+    box-shadow: 0 0 20px #fff;
+    border-color: #fff;
+}
+.video:hover .time-video{
+    border-color: rgba(0,0,0,.75);
+    background: rgba(0,0,0,.75);
+}
+.chapter{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 1px 4px;
+    border: 1px solid #fff;
+    background-color: rgba(0,0,0,.45);
+}
+.manga-item:hover{
+    opacity: 0.8;
+}
+.tag{
+    display: inline-block;
+    padding: 2px 8px;
+    text-transform: uppercase;
+}
+.sport{
+    background-color: rgba(233,30,99,.7);
+}
+.world{
+    background-color: rgba(63,81,181,.7);
+}
+.healthy{
+    background-color: #9c27b0;
+}
+.travel{
+    background-color: rgb(88, 1, 88);
+}
+.font-size-11{
+    font-size: 11px;
+}
+.line-height-2{
+    line-height: 1.5;
+}
+.float-left{
+    float: left;
+}
+.episode{
+    position: absolute;
+    width: 68%;
+    top: 20px;
+    left: 90px;
+    background-color: rgba(0,0,0,.45);
+    padding: 5px;
+    opacity: 0;
+}
+.episodes-item:hover .episode{
+    opacity: 1;
+}
+.rank-style{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0px 0px 10px;    
+}
+.top-rank{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 40px;
+    font-weight: 700;
+}
+.rank{
+    overflow: hidden;
+    height: 95px;
+}
+.background-180-1{
+    background: linear-gradient(
+        180deg
+        ,rgba(244,67,54,.9),rgba(244,67,54,.2));
+}
+.background-180-2{
+    background: linear-gradient(
+-180deg
+,rgba(156,39,176,.9),rgba(156,39,176,.2));
+}
+.background-180-3{
+    background: linear-gradient(
+-180deg
+,rgba(63,81,181,.9),rgba(63,81,181,.2));
+}
+.background-180-4{
+    background: linear-gradient(
+-180deg
+,rgba(0,150,136,.9),rgba(0,150,136,.2));
+}
+.background-180-5{
+    background: linear-gradient(
+-180deg
+,rgba(255,193,7,.9),rgba(255,193,7,.2));
+}
+.background-180-6{
+    background: linear-gradient(
+-180deg
+,rgba(140,106,73,.9),rgba(140,106,73,.2));
+}
+.rank-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    overflow: hidden;
+}
+.rank:hover img{
+    transform: scale(1.2);
+}
+.title-all-anime{
+    font-size: 16px;
+    font-weight: 700;
+}
+.comming-soon{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(216,15,22,.6);
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    padding-top:16px;
+    border-radius: 40px;
+}
+.episodes-item:hover .comming-soon{
+    visibility: hidden;
+}
+.footer-btn{
+    background-color: #d80f16;
+    padding: 8px 20px;
+    border-radius: 2px;
+    color: #fff;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.text-footer{
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.color{
+    color: #888;
 }
