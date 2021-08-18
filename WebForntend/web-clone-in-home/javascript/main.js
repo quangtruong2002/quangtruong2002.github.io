@@ -107,3 +107,89 @@ function isPrime(number) {
       return  true
     
 }
+
+// function run(datas){
+// 	let num = 0;
+// 	for (val of datas) {
+// 		   num += val
+// 	} 
+// 	console.log(num);
+// }
+// run([1,2,3,4])
+
+// function runt(dataa){
+//     num = [];
+// 	for (i = 0; i <= dataa.length; i++) {
+// 		if (dataa[i] % 4 != 0 ) {
+// 			num.push(dataa[i]);
+// 		}
+// 		if (dataa[i] % 4 == 0 && dataa[i] % 3 == 0) {
+// 			break
+// 		}
+// 	} 
+// 		console.log(num);
+// }
+// runt([1,4,6,12,9,8,5,3])
+
+
+// function run(str_input ) {
+// 	return str_input.split("").reverse("").join("");  
+// }
+// let t = run("method");
+// console.log(t)
+let profile = {
+        age: 100
+	};
+function run(name, year_of_birth) {
+	var d = new Date();
+	var current_year = d.getFullYear();
+	// define a object 
+
+	// Calculate age
+	let years_old = current_year - year_of_birth;
+    console.log(years_old)
+	
+	// console.log(); // print object
+	// console.log(... + " is " + ... + " years old");
+}
+run("linh", 2020)
+
+
+// const object1 = {
+//   a: 'somestring',
+//   b: 42
+// };
+
+// for (let [key, value] of Object.entries(object1)) {
+//   console.log(key + value);
+// }
+
+
+// function run() {
+// 	var data = { a: 'x', b: 'y'};
+// 	 let x = object.entries(data);
+// 	 for( let k in x) {
+// 		 console.log(k, x)
+// 	 }
+// }
+
+// function run() {
+// 	var person  = {
+// 		firstName:"Trung",
+// 		lastName:"Vuong",
+// 		age:50,
+// 		eyeColor:"blue"
+// 	};
+// 	console.log(Object.keys(person)) ;
+// }
+function run(data) {
+    for (i = 0; i <= data.length; i++){
+	var s = data.some((data) => data[i] + 1 ==  ? true:false);
+    }
+	if (s) {
+		console.log("Yes");
+	} else {
+		console.log("No");
+	}
+}
+run([1,2,3])

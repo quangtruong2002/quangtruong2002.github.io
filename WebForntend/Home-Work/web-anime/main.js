@@ -1,6 +1,14 @@
 btn = document.querySelector('.avatar');
 nav_right = document.querySelector('.nav-right');
-input_search = document.querySelector(".input-search")
+input_search = document.querySelector(".input-search");
+
+login = document.querySelector(".login");
+signUp = document.querySelector(".signup");
+
+loginBody = document.querySelector(".body");
+signUpBody = document.querySelector(".body2");
+
+tick = document.querySelector(".border-button-3");
 
 icon_out = document.querySelector('.icon-out');
 
