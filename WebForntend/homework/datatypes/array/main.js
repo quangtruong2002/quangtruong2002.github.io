@@ -28,8 +28,11 @@ console.log(numbers);
 
 function sumArr(arr) {
   let num = 0;
+  
   for (i = 1; i < arr.length; i++) {
+    if()
     num += arr[i];
+    count++
   }
   console.log(num / 2);
 }
