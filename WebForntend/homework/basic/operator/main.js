@@ -120,8 +120,18 @@ console.log(`${celcius} °C = ${farenheit} °F`);
 // H thì trừ đi số phút dư * 60 trừ số giây
 
 let time = 3600;
+// let sec = Math.floor(time % 60);
+// let min = Math.floor((time - sec) / 60);
+// let hour = Math.floor((time - min * 60 - sec) / 24); 
+
 let sec = time % 60;
 let min = ((time - sec) / 60) % 60;
-let hour = 
+let hour = ((time - min) * 60 (time - sec)) % 60;
+
+
+// cách 2 Math.floor()
+// let hour = Math.floor(time / 3600);
+// let min = Math.floor((time - hour * 3600) / 60);
+// let sec = (time - hour * 3600 - m * 60);
 
 console.log(`${hour}:${min}:${sec}`);

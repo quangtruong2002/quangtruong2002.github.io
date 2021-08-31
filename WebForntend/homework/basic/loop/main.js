@@ -206,36 +206,113 @@ else {
 
 // VD: 145 = 1! + 4! + 5! = 1 + 24 + 120 = 145 là số Strong
 
-// 1. khai báo và gán giá trị cho biến n
-// 2. khai báo mảng rỗng arr
+// Pseudo Code
+// 1. temp = nCopy % 10
+// 2. Tính temp giai thừa và cộng dồn vào biết total
+// 3. temp = ((nCopy - temp) / 10) % 10 lấy ra chữ số thứ 2
+// 4. Tính temp giai thừa
+// 5. Lặp lại từ bước 3 và bước 4 cho đến khi nCopy
 
-// 3. tính giai thừa 
-//      3.1 lặp n từ 0 đến n6[n] 
-//          3.1.1 tạo mảng num và gán giá trị n6[n]
-//          3.1.2 lặp i từ 1 đến n6[n]
-//              2.1.2.1 lấy num *= i
-//          3.1.3 đẩy num vào arr
-// 
-// 4. khai báo và gán giá trị 0 cho biến number
-// 5. lặp i từ 0 đến arr.length
-//      number += arr
-// 6. in str ra console
+let n6 = 234;
+let nCopy = n6;
+let total = 0;
 
-let n6 = [4,2,7];
-let arr = [];
+while (nCopy > 0) {
+    let temp = nCopy % 10;
+    nCopy = (nCopy - temp) / 10
 
-for (n = 0; n < n6.length; n++) {
-    let num = n6[n];
-    for (i = 1; i < n6[n]; i++){
-        num *= i;
+    let factorial = 1;
+    
+    for (let i = 2; i <= temp; i++) factorial *= i;
 
-    }
-    arr.push(num);
+    total += factorial;
 }
 
-let number = 0;
-for (i = 0; i < arr.length; i++){
-    number += arr[i];
+if (total === n6) console.log(n6, "là số Strong");
+else console.log(n6, "không phải số Strong");
 
-}  
-console.log(number)
+// Bài 11
+// Viết chương trình:
+
+// Khai báo một biến n và nhập giá trị là một số nguyên dương bất kỳ
+// In ra dãy n số Fibonacci
+// 💡 Dãy Fibonacci là dãy bắt đầu bằng 0 và 1, các số phía sau bằng tổng 2 số phía trước
+
+// VD: 0 1 1 2 3 5 8 ...
+
+// 1. khai báo và gán giá trị cho n
+// 2. khai báo 2 biến a và b = 1;
+// 4. khai báo biến c;
+// 5. khai báo chuỗi và gán giá trị a,b 
+// 6. lặp i từ 1 đến n 
+//     6.1 gán c = a + b
+//     6.2 gán a = b
+//     6.3 gán b = c
+//     6.4 gán c vào string
+// 7. in giá trị string ra console
+
+let n7 = 10;
+let a = 1;
+let b = 1;
+let c;
+let string = a + " " + b + " ";
+for(let i = 1; i < n7; i++) {
+    c = a + b;
+    a = b;
+    b = c;
+    string += c + " ";
+}
+console.log(string);
+// Bài 12
+// Viết chương trình:
+// Khai báo 2 biến a, b và nhập giá trị là 2 số nguyên dương
+// Tìm và in ra console ước chung lớn nhất của a và b
+
+
+
+// PESUDO CODE
+// KIỂM TRA SỐ LỚN NHẤT 
+// 1. khai báo 2 biến a và b
+// 2. khai báo biến min = a
+// khai báo mảng rỗng arr để chứa các ước chung 
+// 3. nếu a > b
+//      thì min = b; 
+// TÌM ƯỚC CHUNG
+// 4. lặp i từ 1 đến min 
+//      nếu a chia hết cho i && b chia hết cho i 
+//      thì đẩy i vào arr;
+
+// SO SÁNH KẾT QUẢ VÀ ĐƯA RA ƯỚC CHUNG LỚN NHẤT 
+// 5. khai báo và gán giá trị max = 1 để so sánh kết quả và đưa r ước chung lớn nhất
+// 6. lặp n từ 1 đến dộ dài của arr
+//      nếu arr[n] > max
+//      max = arr[n]
+// 7. in max ra console
+// let a7 = Math.floor(Math.random() * 1000);
+// let b7 = Math.floor(Math.random() * 1000);
+
+let a7 = 140;
+let b7 = 56;
+let min = a7;
+let arr = [];
+
+if (a7 > b7) min = b7;
+console.log("min là" + " " +min)
+
+for (let i = 1; i <= min; i++) {
+
+    if( a7 % i == 0 && b7 % i == 0 ) {
+        arr.push(i);
+    }
+}
+
+let max = 1;
+for (n = 1; n <= arr.length; n++) {
+
+    if (arr[n] > max) {
+        max = arr[n];
+    } 
+}
+console.log(`ƯCLN của ${a7} và ${b7} là ${max}`);
+
+
