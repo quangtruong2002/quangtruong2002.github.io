@@ -15,7 +15,9 @@ const score = {
 // Gọi hàm add thêm một số key (tên môn học) và value (điểm) vào score
 // In score ra console
 
+function add(score, key, value) {
 
+}
 
 // Bài 2
 // Viết hàm remove(obj, key)
@@ -87,3 +89,9 @@ const score = {
 // Thêm method get in giá trị của x ra console
 // Khởi tạo một object counter từ Counter(), gọi các method trên
 // 💡 Làm thế nào để cho phép gọi một chuỗi (chain) method. VD: counter.up().down().get().up()...???? Sử dụng return this 😉
+
+
+
+
+
+ 

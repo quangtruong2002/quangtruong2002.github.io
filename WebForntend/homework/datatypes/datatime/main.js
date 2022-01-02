@@ -105,20 +105,22 @@ console.log(`age: ${calcAge("9/8/2002")}`);
 
 // Bài 6
 // Viết hàm nextBirthday(birthday):
-
 // Chuyển đổi birthday thành giá trị datetime
 // Tính và trả về số ngày tính đến ngày sinh nhật sang năm
 // 💡 Chú ý ngày đặc biệt như 29-2 thì cho sinh nhật là 28-2 nếu không phải năm nhuận
 
-// function nextBirthday(birthday) {
-//     let today = new Date();
+function nextBirthday(birthday2) {
+    let today = new Date();
+    let birthDate =  new Date(birthday2);
+    let year = birthDate.getFullYear();
+    console.log(year)
+    console.log(birthDate);
 
-//     let nextYear = today.getFullYear() + 1;
-//     let year = today.getFullYear();
-//     let birthDate = new Date(`9/8/ ${year}`).getTime();
-//     let nextBirthDate = new Date(`9/8/${nextYear}`).getTime();
-//     let sub = nextBirthDate - birthDate; 
-//     let day = Math.floor(sub / (1000 * 3600 * 24));
-//     return day;
-// }
-// console.log(`age: ${nextBirthday()}`);
+    console.log(today);
+
+
+}
+nextBirthday(calcAge("9/8/2002"));
+nextBirthday(calcAge("9/8/2002"))
+
+

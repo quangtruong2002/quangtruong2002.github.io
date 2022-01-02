@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(45deg, #B9E4B1, #02AD5D);
+    font-family: cursive;
+    height: 100vh;
+    overflow: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+}
+.tile{
+    color: black;
+    background-color: rgb(253, 235, 198);
+    border: 1px black solid;
+    font-size: 4em;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.win {
+    background-image: linear-gradient(45deg, #24ABF3, #4C29E1);
+    padding: 20px 120px 40px 120px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+    color: white;
+}
+.play_again{
+    background-color: rgb(245, 102, 126);
+    color: white;
+    padding: 10px 18px;
+    border: unset;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.hiden{
+    display: none;
+}
+.visible{
+    display: block;
+}
+.x-hover:hover::after{
+    content: 'X';
+    opacity: 0.4;
+}
+.o-hover:hover::after{
+    content: "O";
+    opacity: 0.4;
+}

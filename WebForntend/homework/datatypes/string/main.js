@@ -21,7 +21,7 @@ function countVowel(str) {
     for (let countVowels of str) {
         if (vowel.includes(countVowels)) count++;
     }
-    return str + " => " + count; 
+    return str + " => " + count;
 }
 console.log(countVowel('Hello World'));
 
@@ -31,19 +31,32 @@ console.log(countVowel('Hello World'));
 // 💡 VD: title('hello World!') => 'Hello world!'
 
 function title(str) {
-    let copy = str.split('');
-    let splitStr = str.toLowerCase('').charAt(0).toUpperCase('').split('');
-
-    return string;
+    let cuts = str.charAt(0).toUpperCase('');
+    let cuts2 = str.slice(1).toLowerCase('');
+    let concats = cuts.concat(cuts2);
+    return concats;
 }
-
-console.log(title('hello World'));
+console.log(title('hello Word'));
 
 // Bài 3
 // Viết hàm swapCase(str) chuyển đổi ký tự in hoa thành in thường và ngược lại, trả về kết quả là chuỗi đã chuyển đổi
 
 // 💡 VD: swapCase('heLLo') => 'HEllO'
 
+// function swapCase(str) {
+//     let newArr = [];
+//     let arr = str.trim('').split('');
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr.indexOf(arr[i]) != arr[i]) newArr.push(arr[i]);
+//     }
+
+//     let findRepeatedWords = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         if(newArr.indexOf(arr[i] == -1)) findRepeatedWords.push(arr[i]);
+//     }
+//     return findRepeatedWords;
+// }
+// console.log(swapCase('HEllO'));
 
 
 // Bài 4

@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: monospace;
+    background-image: linear-gradient(to right, #E8D781, #A65C7C);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    font-size: 25px;
+    line-height: 1.5;
+}
+.container{
+    background-color: rgb(226, 226, 226);
+    padding: 20px;
+    width: 400px;
+}
+.footer, .reset, .decrease, .increase{
+    padding: 5px 15px;
+    border-radius: 8px;
+    
+}
